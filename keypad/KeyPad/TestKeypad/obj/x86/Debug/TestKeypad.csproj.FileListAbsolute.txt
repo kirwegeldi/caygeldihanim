@@ -1,0 +1,34 @@
+C:\Users\mesta\Desktop\KeyPad\TestKeypad\bin\Debug\TestKeypad.exe
+C:\Users\mesta\Desktop\KeyPad\TestKeypad\bin\Debug\TestKeypad.pdb
+C:\Users\mesta\Desktop\KeyPad\TestKeypad\bin\Debug\KeyPad.pdb
+C:\Users\mesta\Desktop\KeyPad\TestKeypad\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\mesta\Desktop\KeyPad\TestKeypad\obj\x86\Debug\MainWindow.baml
+C:\Users\mesta\Desktop\KeyPad\TestKeypad\obj\x86\Debug\MainWindow.g.cs
+C:\Users\mesta\Desktop\KeyPad\TestKeypad\obj\x86\Debug\App.g.cs
+C:\Users\mesta\Desktop\KeyPad\TestKeypad\obj\x86\Debug\TestKeypad_MarkupCompile.cache
+C:\Users\mesta\Desktop\KeyPad\TestKeypad\obj\x86\Debug\TestKeypad.g.resources
+C:\Users\mesta\Desktop\KeyPad\TestKeypad\obj\x86\Debug\TestKeypad.Properties.Resources.resources
+C:\Users\mesta\Desktop\KeyPad\TestKeypad\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\mesta\Desktop\KeyPad\TestKeypad\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\mesta\Desktop\KeyPad\TestKeypad\obj\x86\Debug\TestKeypad.exe
+C:\Users\mesta\Desktop\KeyPad\TestKeypad\obj\x86\Debug\TestKeypad.pdb
+C:\Users\mesta\Desktop\KeyPad\TestKeypad\bin\Debug\KeyPad.dll
+C:\Users\Şerif Aksoy\Desktop\keypad\KeyPad\TestKeypad\bin\Debug\TestKeypad.exe.config
+C:\Users\Şerif Aksoy\Desktop\keypad\KeyPad\TestKeypad\bin\Debug\TestKeypad.exe
+C:\Users\Şerif Aksoy\Desktop\keypad\KeyPad\TestKeypad\bin\Debug\TestKeypad.pdb
+C:\Users\Şerif Aksoy\Desktop\keypad\KeyPad\TestKeypad\bin\Debug\KeyPad.dll
+C:\Users\Şerif Aksoy\Desktop\keypad\KeyPad\TestKeypad\bin\Debug\KeyPad.pdb
+C:\Users\Şerif Aksoy\Desktop\keypad\KeyPad\TestKeypad\bin\Debug\KeyPad.dll.config
+C:\Users\Şerif Aksoy\Desktop\keypad\KeyPad\TestKeypad\obj\x86\Debug\TestKeypad.csproj.AssemblyReference.cache
+C:\Users\Şerif Aksoy\Desktop\keypad\KeyPad\TestKeypad\obj\x86\Debug\TestKeypad.csproj.SuggestedBindingRedirects.cache
+C:\Users\Şerif Aksoy\Desktop\keypad\KeyPad\TestKeypad\obj\x86\Debug\MainWindow.baml
+C:\Users\Şerif Aksoy\Desktop\keypad\KeyPad\TestKeypad\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Şerif Aksoy\Desktop\keypad\KeyPad\TestKeypad\obj\x86\Debug\App.g.cs
+C:\Users\Şerif Aksoy\Desktop\keypad\KeyPad\TestKeypad\obj\x86\Debug\TestKeypad_MarkupCompile.cache
+C:\Users\Şerif Aksoy\Desktop\keypad\KeyPad\TestKeypad\obj\x86\Debug\TestKeypad.g.resources
+C:\Users\Şerif Aksoy\Desktop\keypad\KeyPad\TestKeypad\obj\x86\Debug\TestKeypad.Properties.Resources.resources
+C:\Users\Şerif Aksoy\Desktop\keypad\KeyPad\TestKeypad\obj\x86\Debug\TestKeypad.csproj.GenerateResource.cache
+C:\Users\Şerif Aksoy\Desktop\keypad\KeyPad\TestKeypad\obj\x86\Debug\TestKeypad.csproj.CoreCompileInputs.cache
+C:\Users\Şerif Aksoy\Desktop\keypad\KeyPad\TestKeypad\obj\x86\Debug\TestKeypad.csproj.CopyComplete
+C:\Users\Şerif Aksoy\Desktop\keypad\KeyPad\TestKeypad\obj\x86\Debug\TestKeypad.exe
+C:\Users\Şerif Aksoy\Desktop\keypad\KeyPad\TestKeypad\obj\x86\Debug\TestKeypad.pdb

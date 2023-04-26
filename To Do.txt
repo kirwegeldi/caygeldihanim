@@ -1,0 +1,8 @@
+-> mixer bilinking
+-> Checkbox confirmation
+-> Set değerleri ve key pad
+-> Zero Tare
+-> Siemens logo classı
+-> Report
+-> logger düzenlenecek
+-> program yeniden basladığında set değerleri son halinde gelsin

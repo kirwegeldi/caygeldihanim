@@ -1,0 +1,152 @@
+C:\Users\Şerif Aksoy\Desktop\LivaCay\CAY_Weighing\bin\Debug\CAY_Weighing.exe.config
+C:\Users\Şerif Aksoy\Desktop\LivaCay\CAY_Weighing\bin\Debug\CAY_Weighing.exe
+C:\Users\Şerif Aksoy\Desktop\LivaCay\CAY_Weighing\bin\Debug\CAY_Weighing.pdb
+C:\Users\Şerif Aksoy\Desktop\LivaCay\CAY_Weighing\obj\Debug\CAY_Weighing.csproj.AssemblyReference.cache
+C:\Users\Şerif Aksoy\Desktop\LivaCay\CAY_Weighing\obj\Debug\CAY_Weighing.csproj.SuggestedBindingRedirects.cache
+C:\Users\Şerif Aksoy\Desktop\LivaCay\CAY_Weighing\obj\Debug\MainWindow.g.cs
+C:\Users\Şerif Aksoy\Desktop\LivaCay\CAY_Weighing\obj\Debug\App.g.cs
+C:\Users\Şerif Aksoy\Desktop\LivaCay\CAY_Weighing\obj\Debug\CAY_Weighing_MarkupCompile.cache
+C:\Users\Şerif Aksoy\Desktop\LivaCay\CAY_Weighing\obj\Debug\CAY_Weighing_MarkupCompile.lref
+C:\Users\Şerif Aksoy\Desktop\LivaCay\CAY_Weighing\obj\Debug\MainWindow.baml
+C:\Users\Şerif Aksoy\Desktop\LivaCay\CAY_Weighing\obj\Debug\CAY_Weighing.g.resources
+C:\Users\Şerif Aksoy\Desktop\LivaCay\CAY_Weighing\obj\Debug\CAY_Weighing.Properties.Resources.resources
+C:\Users\Şerif Aksoy\Desktop\LivaCay\CAY_Weighing\obj\Debug\CAY_Weighing.csproj.GenerateResource.cache
+C:\Users\Şerif Aksoy\Desktop\LivaCay\CAY_Weighing\obj\Debug\CAY_Weighing.csproj.CoreCompileInputs.cache
+C:\Users\Şerif Aksoy\Desktop\LivaCay\CAY_Weighing\obj\Debug\CAY_Weighing.exe
+C:\Users\Şerif Aksoy\Desktop\LivaCay\CAY_Weighing\obj\Debug\CAY_Weighing.pdb
+C:\Users\Şerif Aksoy\Desktop\LivaCay\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.csproj.AssemblyReference.cache
+C:\Users\Şerif Aksoy\Desktop\LivaCay\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.csproj.SuggestedBindingRedirects.cache
+C:\Users\Şerif Aksoy\Desktop\LivaCay\CAY_Weighing\CAY_Weighing\obj\Debug\MainWindow.g.cs
+C:\Users\Şerif Aksoy\Desktop\LivaCay\CAY_Weighing\CAY_Weighing\obj\Debug\App.g.cs
+C:\Users\Şerif Aksoy\Desktop\LivaCay\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing_MarkupCompile.cache
+C:\Users\Şerif Aksoy\Desktop\LivaCay\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing_MarkupCompile.lref
+C:\Users\Şerif Aksoy\Desktop\LivaCay\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.exe
+C:\Users\Şerif Aksoy\Desktop\LivaCay\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.pdb
+C:\Users\Şerif Aksoy\Desktop\LivaCay\CAY_Weighing\CAY_Weighing\bin\Debug\CAY_Weighing.exe.config
+C:\Users\Şerif Aksoy\Desktop\LivaCay\CAY_Weighing\CAY_Weighing\bin\Debug\CAY_Weighing.exe
+C:\Users\Şerif Aksoy\Desktop\LivaCay\CAY_Weighing\CAY_Weighing\bin\Debug\CAY_Weighing.pdb
+C:\Users\Şerif Aksoy\Desktop\LivaCay\CAY_Weighing\CAY_Weighing\bin\Debug\EasyModbus.dll
+C:\Users\Şerif Aksoy\Desktop\LivaCay\CAY_Weighing\CAY_Weighing\bin\Debug\EasyModbus.xml
+C:\Users\Şerif Aksoy\Desktop\LivaCay\CAY_Weighing\CAY_Weighing\obj\Debug\MainWindow.baml
+C:\Users\Şerif Aksoy\Desktop\LivaCay\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.g.resources
+C:\Users\Şerif Aksoy\Desktop\LivaCay\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.Properties.Resources.resources
+C:\Users\Şerif Aksoy\Desktop\LivaCay\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.csproj.GenerateResource.cache
+C:\Users\Şerif Aksoy\Desktop\LivaCay\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.csproj.CoreCompileInputs.cache
+C:\Users\Şerif Aksoy\Desktop\LivaCay\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.csproj.CopyComplete
+C:\Users\UGUR\source\repos\CAY_Weighing\CAY_Weighing\bin\Debug\CAY_Weighing.exe.config
+C:\Users\UGUR\source\repos\CAY_Weighing\CAY_Weighing\bin\Debug\CAY_Weighing.exe
+C:\Users\UGUR\source\repos\CAY_Weighing\CAY_Weighing\bin\Debug\CAY_Weighing.pdb
+C:\Users\UGUR\source\repos\CAY_Weighing\CAY_Weighing\bin\Debug\EasyModbus.dll
+C:\Users\UGUR\source\repos\CAY_Weighing\CAY_Weighing\bin\Debug\EasyModbus.xml
+C:\Users\UGUR\source\repos\CAY_Weighing\CAY_Weighing\obj\Debug\MainWindow.g.cs
+C:\Users\UGUR\source\repos\CAY_Weighing\CAY_Weighing\obj\Debug\App.g.cs
+C:\Users\UGUR\source\repos\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing_MarkupCompile.cache
+C:\Users\UGUR\source\repos\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing_MarkupCompile.lref
+C:\Users\UGUR\source\repos\CAY_Weighing\CAY_Weighing\obj\Debug\MainWindow.baml
+C:\Users\UGUR\source\repos\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.g.resources
+C:\Users\UGUR\source\repos\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.Properties.Resources.resources
+C:\Users\UGUR\source\repos\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.csproj.GenerateResource.cache
+C:\Users\UGUR\source\repos\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.csproj.CoreCompileInputs.cache
+C:\Users\UGUR\source\repos\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.csproj.CopyComplete
+C:\Users\UGUR\source\repos\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.exe
+C:\Users\UGUR\source\repos\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.pdb
+C:\Users\UGUR\Source\Repos\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.csproj.AssemblyReference.cache
+D:\GitRepos\CAY_Weighing\CAY_Weighing\bin\Debug\CAY_Weighing.exe.config
+D:\GitRepos\CAY_Weighing\CAY_Weighing\bin\Debug\CAY_Weighing.exe
+D:\GitRepos\CAY_Weighing\CAY_Weighing\bin\Debug\CAY_Weighing.pdb
+D:\GitRepos\CAY_Weighing\CAY_Weighing\bin\Debug\EasyModbus.dll
+D:\GitRepos\CAY_Weighing\CAY_Weighing\bin\Debug\EasyModbus.xml
+D:\GitRepos\CAY_Weighing\CAY_Weighing\obj\Debug\MainWindow.g.cs
+D:\GitRepos\CAY_Weighing\CAY_Weighing\obj\Debug\App.g.cs
+D:\GitRepos\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing_MarkupCompile.cache
+D:\GitRepos\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing_MarkupCompile.lref
+D:\GitRepos\CAY_Weighing\CAY_Weighing\obj\Debug\MainWindow.baml
+D:\GitRepos\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.g.resources
+D:\GitRepos\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.Properties.Resources.resources
+D:\GitRepos\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.csproj.GenerateResource.cache
+D:\GitRepos\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.exe.licenses
+D:\GitRepos\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.csproj.CoreCompileInputs.cache
+D:\GitRepos\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.csproj.CopyComplete
+D:\GitRepos\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.exe
+D:\GitRepos\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.pdb
+D:\GitRepos\CAY_Weighing\CAY_Weighing\bin\Debug\DevExpress.Mvvm.v21.1.dll
+D:\GitRepos\CAY_Weighing\CAY_Weighing\bin\Debug\DevExpress.Mvvm.v21.1.xml
+C:\Users\Şerif Aksoy\Desktop\Liva\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.csproj.AssemblyReference.cache
+C:\Users\Şerif Aksoy\Desktop\Liva\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.csproj.SuggestedBindingRedirects.cache
+C:\Users\Şerif Aksoy\Desktop\Liva\CAY_Weighing\CAY_Weighing\obj\Debug\MainWindow.g.cs
+C:\Users\Şerif Aksoy\Desktop\Liva\CAY_Weighing\CAY_Weighing\obj\Debug\App.g.cs
+C:\Users\Şerif Aksoy\Desktop\Liva\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing_MarkupCompile.cache
+C:\Users\Şerif Aksoy\Desktop\Liva\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing_MarkupCompile.lref
+C:\Users\Şerif Aksoy\Desktop\Liva\CAY_Weighing\CAY_Weighing\obj\Debug\MainWindow.baml
+C:\Users\Şerif Aksoy\Desktop\Liva\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.g.resources
+C:\Users\Şerif Aksoy\Desktop\Liva\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.Properties.Resources.resources
+C:\Users\Şerif Aksoy\Desktop\Liva\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.csproj.GenerateResource.cache
+C:\Users\Şerif Aksoy\Desktop\Liva\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.exe.licenses
+C:\Users\Şerif Aksoy\Desktop\Liva\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.pdb
+C:\Users\Şerif Aksoy\Desktop\Liva\CAY_Weighing\CAY_Weighing\bin\Debug\CAY_Weighing.exe.config
+C:\Users\Şerif Aksoy\Desktop\Liva\CAY_Weighing\CAY_Weighing\bin\Debug\CAY_Weighing.exe
+C:\Users\Şerif Aksoy\Desktop\Liva\CAY_Weighing\CAY_Weighing\bin\Debug\CAY_Weighing.pdb
+C:\Users\Şerif Aksoy\Desktop\Liva\CAY_Weighing\CAY_Weighing\bin\Debug\EasyModbus.dll
+C:\Users\Şerif Aksoy\Desktop\Liva\CAY_Weighing\CAY_Weighing\bin\Debug\EasyModbus.xml
+C:\Users\Şerif Aksoy\Desktop\Liva\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.csproj.CoreCompileInputs.cache
+C:\Users\Şerif Aksoy\Desktop\Liva\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.csproj.CopyComplete
+C:\Users\Şerif Aksoy\Desktop\Liva\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.exe
+D:\GitRepos\CAY_Weighing\CAY_Weighing\obj\Debug\NumericKeypad.g.cs
+D:\GitRepos\CAY_Weighing\CAY_Weighing\obj\Debug\NumericKeypad.baml
+C:\Users\Şerif Aksoy\Desktop\Liva\CAY_Weighing\CAY_Weighing\obj\Debug\NumericKeypad.g.cs
+C:\Users\Şerif Aksoy\Desktop\Liva\CAY_Weighing\CAY_Weighing\obj\Debug\NumericKeypad.baml
+C:\Users\Şerif Aksoy\Desktop\Liva\CAY_Weighing\CAY_Weighing\bin\Debug\DevExpress.Mvvm.v21.1.xml
+D:\GitRepos\CAY_Weighing\CAY_Weighing\obj\Debug\Password.g.cs
+D:\GitRepos\CAY_Weighing\CAY_Weighing\obj\Debug\Password.baml
+D:\GitRepos\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.csproj.AssemblyReference.cache
+C:\Users\Şerif Aksoy\Desktop\Livax\CAY_Weighing\CAY_Weighing\bin\Debug\CAY_Weighing.exe.config
+C:\Users\Şerif Aksoy\Desktop\Livax\CAY_Weighing\CAY_Weighing\bin\Debug\CAY_Weighing.exe
+C:\Users\Şerif Aksoy\Desktop\Livax\CAY_Weighing\CAY_Weighing\bin\Debug\CAY_Weighing.pdb
+C:\Users\Şerif Aksoy\Desktop\Livax\CAY_Weighing\CAY_Weighing\bin\Debug\EasyModbus.dll
+C:\Users\Şerif Aksoy\Desktop\Livax\CAY_Weighing\CAY_Weighing\bin\Debug\EasyModbus.xml
+C:\Users\Şerif Aksoy\Desktop\Livax\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.csproj.AssemblyReference.cache
+C:\Users\Şerif Aksoy\Desktop\Livax\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.csproj.SuggestedBindingRedirects.cache
+C:\Users\Şerif Aksoy\Desktop\Livax\CAY_Weighing\CAY_Weighing\obj\Debug\MainWindow.g.cs
+C:\Users\Şerif Aksoy\Desktop\Livax\CAY_Weighing\CAY_Weighing\obj\Debug\NumericKeypad.g.cs
+C:\Users\Şerif Aksoy\Desktop\Livax\CAY_Weighing\CAY_Weighing\obj\Debug\Password.g.cs
+C:\Users\Şerif Aksoy\Desktop\Livax\CAY_Weighing\CAY_Weighing\obj\Debug\App.g.cs
+C:\Users\Şerif Aksoy\Desktop\Livax\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing_MarkupCompile.cache
+C:\Users\Şerif Aksoy\Desktop\Livax\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing_MarkupCompile.lref
+C:\Users\Şerif Aksoy\Desktop\Livax\CAY_Weighing\CAY_Weighing\obj\Debug\MainWindow.baml
+C:\Users\Şerif Aksoy\Desktop\Livax\CAY_Weighing\CAY_Weighing\obj\Debug\NumericKeypad.baml
+C:\Users\Şerif Aksoy\Desktop\Livax\CAY_Weighing\CAY_Weighing\obj\Debug\Password.baml
+C:\Users\Şerif Aksoy\Desktop\Livax\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.g.resources
+C:\Users\Şerif Aksoy\Desktop\Livax\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.Properties.Resources.resources
+C:\Users\Şerif Aksoy\Desktop\Livax\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.csproj.GenerateResource.cache
+C:\Users\Şerif Aksoy\Desktop\Livax\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.exe.licenses
+C:\Users\Şerif Aksoy\Desktop\Livax\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.csproj.CoreCompileInputs.cache
+C:\Users\Şerif Aksoy\Desktop\Livax\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.csproj.CopyComplete
+C:\Users\Şerif Aksoy\Desktop\Livax\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.exe
+C:\Users\Şerif Aksoy\Desktop\Livax\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.pdb
+C:\Users\Şerif Aksoy\Desktop\Livax\CAY_Weighing\CAY_Weighing\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\GitRepos\CAY_Weighing\CAY_Weighing\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\bin\Debug\CAY_Weighing.exe.config
+C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\bin\Debug\CAY_Weighing.exe
+C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\bin\Debug\CAY_Weighing.pdb
+C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\bin\Debug\EasyModbus.dll
+C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\bin\Debug\EasyModbus.xml
+C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.csproj.AssemblyReference.cache
+C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.csproj.SuggestedBindingRedirects.cache
+C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\obj\Debug\MainWindow.g.cs
+C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\obj\Debug\NumericKeypad.g.cs
+C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\obj\Debug\Password.g.cs
+C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\obj\Debug\App.g.cs
+C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing_MarkupCompile.cache
+C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing_MarkupCompile.lref
+C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\obj\Debug\MainWindow.baml
+C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\obj\Debug\NumericKeypad.baml
+C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\obj\Debug\Password.baml
+C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.g.resources
+C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.Properties.Resources.resources
+C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.csproj.GenerateResource.cache
+C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.exe.licenses
+C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.csproj.CoreCompileInputs.cache
+C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.csproj.CopyComplete
+C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.exe
+C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\obj\Debug\CAY_Weighing.pdb

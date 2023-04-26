@@ -1,0 +1,42 @@
+c:\users\michele\documents\visual studio 2010\Projects\KeyPad\KeyPad\bin\Debug\KeyPad.exe
+c:\users\michele\documents\visual studio 2010\Projects\KeyPad\KeyPad\bin\Debug\KeyPad.pdb
+c:\users\michele\documents\visual studio 2010\Projects\KeyPad\KeyPad\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\michele\documents\visual studio 2010\Projects\KeyPad\KeyPad\obj\x86\Debug\App.g.cs
+c:\users\michele\documents\visual studio 2010\Projects\KeyPad\KeyPad\obj\x86\Debug\KeyPad_MarkupCompile.cache
+c:\users\michele\documents\visual studio 2010\Projects\KeyPad\KeyPad\obj\x86\Debug\KeyPad.g.resources
+c:\users\michele\documents\visual studio 2010\Projects\KeyPad\KeyPad\obj\x86\Debug\KeyPad.Properties.Resources.resources
+c:\users\michele\documents\visual studio 2010\Projects\KeyPad\KeyPad\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\michele\documents\visual studio 2010\Projects\KeyPad\KeyPad\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\michele\documents\visual studio 2010\Projects\KeyPad\KeyPad\obj\x86\Debug\KeyPad.exe
+c:\users\michele\documents\visual studio 2010\Projects\KeyPad\KeyPad\obj\x86\Debug\KeyPad.pdb
+C:\Users\Michele\documents\visual studio 2010\Projects\KeyPad\KeyPad\obj\x86\Debug\Window1.baml
+C:\Users\Michele\documents\visual studio 2010\Projects\KeyPad\KeyPad\obj\x86\Debug\Window1.g.cs
+C:\Users\Michele\documents\visual studio 2010\Projects\KeyPad\KeyPad\obj\x86\Debug\Keypad.baml
+C:\Users\Michele\documents\visual studio 2010\Projects\KeyPad\KeyPad\obj\x86\Debug\Keypad.g.cs
+C:\Users\Michele\documents\visual studio 2010\Projects\KeyPad\KeyPad\bin\Debug\KeyPad.exe.config
+C:\Users\mesta\Desktop\KeyPad\KeyPad\obj\x86\Debug\KeyPad.pdb
+C:\Users\mesta\Desktop\KeyPad\KeyPad\bin\Debug\KeyPad.pdb
+C:\Users\mesta\Desktop\KeyPad\KeyPad\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\mesta\Desktop\KeyPad\KeyPad\obj\x86\Debug\Keypad.baml
+C:\Users\mesta\Desktop\KeyPad\KeyPad\obj\x86\Debug\Keypad.g.cs
+C:\Users\mesta\Desktop\KeyPad\KeyPad\obj\x86\Debug\KeyPad_MarkupCompile.cache
+C:\Users\mesta\Desktop\KeyPad\KeyPad\obj\x86\Debug\KeyPad.g.resources
+C:\Users\mesta\Desktop\KeyPad\KeyPad\obj\x86\Debug\KeyPad.Properties.Resources.resources
+C:\Users\mesta\Desktop\KeyPad\KeyPad\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\mesta\Desktop\KeyPad\KeyPad\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\mesta\Desktop\KeyPad\KeyPad\bin\Debug\KeyPad.dll.config
+C:\Users\mesta\Desktop\KeyPad\KeyPad\bin\Debug\KeyPad.dll
+C:\Users\mesta\Desktop\KeyPad\KeyPad\obj\x86\Debug\KeyPad.dll
+C:\Users\Şerif Aksoy\Desktop\keypad\KeyPad\KeyPad\bin\Debug\KeyPad.dll.config
+C:\Users\Şerif Aksoy\Desktop\keypad\KeyPad\KeyPad\bin\Debug\KeyPad.dll
+C:\Users\Şerif Aksoy\Desktop\keypad\KeyPad\KeyPad\bin\Debug\KeyPad.pdb
+C:\Users\Şerif Aksoy\Desktop\keypad\KeyPad\KeyPad\obj\x86\Debug\KeyPad.csproj.AssemblyReference.cache
+C:\Users\Şerif Aksoy\Desktop\keypad\KeyPad\KeyPad\obj\x86\Debug\Keypad.baml
+C:\Users\Şerif Aksoy\Desktop\keypad\KeyPad\KeyPad\obj\x86\Debug\Keypad.g.cs
+C:\Users\Şerif Aksoy\Desktop\keypad\KeyPad\KeyPad\obj\x86\Debug\KeyPad_MarkupCompile.cache
+C:\Users\Şerif Aksoy\Desktop\keypad\KeyPad\KeyPad\obj\x86\Debug\KeyPad.g.resources
+C:\Users\Şerif Aksoy\Desktop\keypad\KeyPad\KeyPad\obj\x86\Debug\KeyPad.Properties.Resources.resources
+C:\Users\Şerif Aksoy\Desktop\keypad\KeyPad\KeyPad\obj\x86\Debug\KeyPad.csproj.GenerateResource.cache
+C:\Users\Şerif Aksoy\Desktop\keypad\KeyPad\KeyPad\obj\x86\Debug\KeyPad.csproj.CoreCompileInputs.cache
+C:\Users\Şerif Aksoy\Desktop\keypad\KeyPad\KeyPad\obj\x86\Debug\KeyPad.dll
+C:\Users\Şerif Aksoy\Desktop\keypad\KeyPad\KeyPad\obj\x86\Debug\KeyPad.pdb

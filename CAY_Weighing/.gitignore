@@ -1,0 +1,8 @@
+﻿################################################################################
+# Bu .gitignore dosyası Microsoft(R) Visual Studio tarafından otomatik olarak oluşturulmuştur.
+################################################################################
+
+*.sqlite
+*.vsidx
+*.xlsx
+/CAY_Weighing/.vs/CAY_Weighing/FileContentIndex/5523f078-319e-4172-b155-6be67f5912bf.vsidx

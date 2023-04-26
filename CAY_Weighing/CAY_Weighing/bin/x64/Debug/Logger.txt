@@ -1,0 +1,7 @@
+-------------Application Logs---------------
+26.04.2023 10:14:47 - #Info - Connectn altına geldi
+26.04.2023 10:14:48 - #Info - Connectn altına geldi
+26.04.2023 10:14:49 - #Info - Connectn altına geldi
+26.04.2023 10:14:50 - #Info - Connectn altına geldi
+26.04.2023 10:14:52 - #Info - Connectn altına geldi
+26.04.2023 10:14:53 - #Info - Connectn altına geldi
