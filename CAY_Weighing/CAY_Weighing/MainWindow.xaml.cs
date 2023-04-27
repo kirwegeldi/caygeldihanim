@@ -70,6 +70,12 @@ namespace CAY_Weighing
             {
                 Silo silo = new Silo(instance.id, instance.IpAddress, instance.port);
                 Silo.AllSilos.Add(silo);
+
+                if (silo._ıd < 5)
+                    Silo.Hat1.Add(silo);
+                else if (silo._ıd <9)
+                    Silo.Hat2.Add(silo);
+
                 silo.Connect();
                 silo.modbusComm.ConnectedChanged += ModbusComm_ConnectedChanged;
             }
@@ -659,21 +665,31 @@ namespace CAY_Weighing
 
         private void Hat1_Start_Click(object sender, RoutedEventArgs e)
         {
+            foreach (var silo in Silo.Hat1)
+            {
+                silo.WriteTare();
+            }
             PLC.WriteCoil(8257, false);//Start
             Thread.Sleep(100);
             PLC.WriteCoil(8256, true);//Stop
             Thread.Sleep(100);
             PLC.WriteCoil(8256, false);//Start
+            WTM.listenHat1(true);
+            
 
         }
         private void Hat2_Start_Click(object sender, RoutedEventArgs e)
         {
+            foreach (var silo in Silo.Hat2)
+            {
+                silo.WriteTare();
+            }
             PLC.WriteCoil(8268, false);//Start
             Thread.Sleep(100);
             PLC.WriteCoil(8262, true);//Stop
             Thread.Sleep(100);
             PLC.WriteCoil(8262, false); //Start
-
+            WTM.listenHat2(true);
         }
         private void Hat1_Stop_Click(object sender, RoutedEventArgs e)
         {
@@ -682,6 +698,7 @@ namespace CAY_Weighing
             Thread.Sleep(100);
             PLC.WriteCoil(8257, true);
             Thread.Sleep(100);
+            WTM.listenHat1(false);
         }
         private void Hat2_Stop_Click(object sender, RoutedEventArgs e)
         {
@@ -689,6 +706,7 @@ namespace CAY_Weighing
             Thread.Sleep(100);
             PLC.WriteCoil(8268, true);
             Thread.Sleep(100);
+            WTM.listenHat2(false);
         }
     }
 }

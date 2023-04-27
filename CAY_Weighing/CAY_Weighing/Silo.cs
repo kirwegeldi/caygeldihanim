@@ -19,6 +19,8 @@ namespace CAY_Weighing
         public static List<Silo> ConnectedSilos = new List<Silo>();
         public static List<Silo> DisconnectedSilos = new List<Silo>();
         public static List<Silo> AllSilos = new List<Silo>();
+        public static List<Silo> Hat1 = new List<Silo>();
+        public static List<Silo> Hat2 = new List<Silo>();
 
         private static double upperLimit = 1400;    //for blink
         private static double lowerLimit = 300;
@@ -33,9 +35,10 @@ namespace CAY_Weighing
         private double _brutWeight;
         public int _valueLow;
         public int _valueHigh;
-        private bool _isActive = true;
+        public bool _isActive = true;
         private bool _blinkStatic;                      // if current weight is below the lower limit it remanins true
         private bool _blink;                            // if current weight is below the lower limit it changes !_blink
+        public bool _completed;                         // plc start verildiğinde filling miktarı sete geldiğinde true verir.
         
         public Silo(int ıd, string ip,int port)
         {

@@ -26,7 +26,7 @@ namespace CAY_Weighing
             _port = silo._port;
             _silo=silo;
             modbusClient = new ModbusClient(_Ip,_port);
-            modbusClient.UnitIdentifier = (byte)this._id;
+            //modbusClient.UnitIdentifier = (byte)this._id;
         }
 
         public Communication()
