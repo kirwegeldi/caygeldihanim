@@ -82,7 +82,7 @@ namespace CAY_Weighing
         {
             try
             {
-                return modbusClient.ReadHoldingRegisters(8, 2);
+                return modbusClient.ReadHoldingRegisters(7, 2);
             }
             catch (Exception ex)
             {

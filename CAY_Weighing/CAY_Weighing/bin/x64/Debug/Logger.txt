@@ -1,7 +1,261 @@
--------------Application Logs---------------
-26.04.2023 10:14:47 - #Info - Connectn altına geldi
-26.04.2023 10:14:48 - #Info - Connectn altına geldi
-26.04.2023 10:14:49 - #Info - Connectn altına geldi
-26.04.2023 10:14:50 - #Info - Connectn altına geldi
-26.04.2023 10:14:52 - #Info - Connectn altına geldi
-26.04.2023 10:14:53 - #Info - Connectn altına geldi
+27.04.2023 23:50:22 - #Error - System.IO.IOException: Aktarma bağlantısından veriler okunamadı: Kurulan bir bağlantı, ana makinenizdeki yazılım tarafından iptal edildi. ---> System.Net.Sockets.SocketException: Kurulan bir bağlantı, ana makinenizdeki yazılım tarafından iptal edildi
+   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- İç özel durum yığını izlemesinin sonu ---
+   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   konum: EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   konum: CAY_Weighing.Communication.GetMessage() C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\Communication.cs içinde: satır 85
+27.04.2023 23:50:22 - #Info - Disconnected 127.0.0.1:502
+27.04.2023 23:50:23 - #Info - Connected 127.0.0.1:503
+27.04.2023 23:50:25 - #Error - System.IO.IOException: Aktarma bağlantısından veriler okunamadı: Bağlanılan uygun olarak belli bir süre içinde yanıt vermediğinden veya kurulan
+bağlantı bağlanılan ana bilgisayar yanıt vermediğinden bir bağlantı kurulamadı. ---> System.Net.Sockets.SocketException: Bağlanılan uygun olarak belli bir süre içinde yanıt vermediğinden veya kurulan
+bağlantı bağlanılan ana bilgisayar yanıt vermediğinden bir bağlantı kurulamadı
+   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- İç özel durum yığını izlemesinin sonu ---
+   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   konum: EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   konum: CAY_Weighing.Communication.GetMessage() C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\Communication.cs içinde: satır 85
+27.04.2023 23:50:25 - #Info - Disconnected 127.0.0.1:503
+27.04.2023 23:50:29 - #Info - Connected 127.0.0.1:503
+27.04.2023 23:50:31 - #Error - System.IO.IOException: Aktarma bağlantısından veriler okunamadı: Bağlanılan uygun olarak belli bir süre içinde yanıt vermediğinden veya kurulan
+bağlantı bağlanılan ana bilgisayar yanıt vermediğinden bir bağlantı kurulamadı. ---> System.Net.Sockets.SocketException: Bağlanılan uygun olarak belli bir süre içinde yanıt vermediğinden veya kurulan
+bağlantı bağlanılan ana bilgisayar yanıt vermediğinden bir bağlantı kurulamadı
+   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- İç özel durum yığını izlemesinin sonu ---
+   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   konum: EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   konum: CAY_Weighing.Communication.GetMessage() C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\Communication.cs içinde: satır 85
+27.04.2023 23:50:31 - #Info - Disconnected 127.0.0.1:503
+27.04.2023 23:50:35 - #Info - Connected 127.0.0.1:503
+27.04.2023 23:50:37 - #Error - System.IO.IOException: Aktarma bağlantısından veriler okunamadı: Bağlanılan uygun olarak belli bir süre içinde yanıt vermediğinden veya kurulan
+bağlantı bağlanılan ana bilgisayar yanıt vermediğinden bir bağlantı kurulamadı. ---> System.Net.Sockets.SocketException: Bağlanılan uygun olarak belli bir süre içinde yanıt vermediğinden veya kurulan
+bağlantı bağlanılan ana bilgisayar yanıt vermediğinden bir bağlantı kurulamadı
+   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- İç özel durum yığını izlemesinin sonu ---
+   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   konum: EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   konum: CAY_Weighing.Communication.GetMessage() C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\Communication.cs içinde: satır 85
+27.04.2023 23:50:37 - #Info - Disconnected 127.0.0.1:503
+27.04.2023 23:50:41 - #Info - Connected 127.0.0.1:503
+27.04.2023 23:50:43 - #Error - System.IO.IOException: Aktarma bağlantısından veriler okunamadı: Bağlanılan uygun olarak belli bir süre içinde yanıt vermediğinden veya kurulan
+bağlantı bağlanılan ana bilgisayar yanıt vermediğinden bir bağlantı kurulamadı. ---> System.Net.Sockets.SocketException: Bağlanılan uygun olarak belli bir süre içinde yanıt vermediğinden veya kurulan
+bağlantı bağlanılan ana bilgisayar yanıt vermediğinden bir bağlantı kurulamadı
+   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- İç özel durum yığını izlemesinin sonu ---
+   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   konum: EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   konum: CAY_Weighing.Communication.GetMessage() C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\Communication.cs içinde: satır 85
+27.04.2023 23:50:43 - #Info - Disconnected 127.0.0.1:503
+27.04.2023 23:50:47 - #Info - Connected 127.0.0.1:503
+27.04.2023 23:50:49 - #Error - System.IO.IOException: Aktarma bağlantısından veriler okunamadı: Bağlanılan uygun olarak belli bir süre içinde yanıt vermediğinden veya kurulan
+bağlantı bağlanılan ana bilgisayar yanıt vermediğinden bir bağlantı kurulamadı. ---> System.Net.Sockets.SocketException: Bağlanılan uygun olarak belli bir süre içinde yanıt vermediğinden veya kurulan
+bağlantı bağlanılan ana bilgisayar yanıt vermediğinden bir bağlantı kurulamadı
+   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- İç özel durum yığını izlemesinin sonu ---
+   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   konum: EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   konum: CAY_Weighing.Communication.GetMessage() C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\Communication.cs içinde: satır 85
+27.04.2023 23:50:49 - #Info - Disconnected 127.0.0.1:503
+27.04.2023 23:50:53 - #Info - Connected 127.0.0.1:503
+27.04.2023 23:50:55 - #Error - System.IO.IOException: Aktarma bağlantısından veriler okunamadı: Bağlanılan uygun olarak belli bir süre içinde yanıt vermediğinden veya kurulan
+bağlantı bağlanılan ana bilgisayar yanıt vermediğinden bir bağlantı kurulamadı. ---> System.Net.Sockets.SocketException: Bağlanılan uygun olarak belli bir süre içinde yanıt vermediğinden veya kurulan
+bağlantı bağlanılan ana bilgisayar yanıt vermediğinden bir bağlantı kurulamadı
+   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- İç özel durum yığını izlemesinin sonu ---
+   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   konum: EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   konum: CAY_Weighing.Communication.GetMessage() C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\Communication.cs içinde: satır 85
+27.04.2023 23:50:55 - #Info - Disconnected 127.0.0.1:503
+27.04.2023 23:51:17 - #Info - Connected 127.0.0.1:503
+27.04.2023 23:51:29 - #Error - System.IO.IOException: Aktarma bağlantısından veriler okunamadı: Bağlanılan uygun olarak belli bir süre içinde yanıt vermediğinden veya kurulan
+bağlantı bağlanılan ana bilgisayar yanıt vermediğinden bir bağlantı kurulamadı. ---> System.Net.Sockets.SocketException: Bağlanılan uygun olarak belli bir süre içinde yanıt vermediğinden veya kurulan
+bağlantı bağlanılan ana bilgisayar yanıt vermediğinden bir bağlantı kurulamadı
+   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- İç özel durum yığını izlemesinin sonu ---
+   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   konum: EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   konum: CAY_Weighing.Communication.GetMessage() C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\Communication.cs içinde: satır 85
+27.04.2023 23:51:29 - #Info - Disconnected 127.0.0.1:503
+27.04.2023 23:51:33 - #Info - Connected 127.0.0.1:503
+27.04.2023 23:51:35 - #Error - System.IO.IOException: Aktarma bağlantısından veriler okunamadı: Bağlanılan uygun olarak belli bir süre içinde yanıt vermediğinden veya kurulan
+bağlantı bağlanılan ana bilgisayar yanıt vermediğinden bir bağlantı kurulamadı. ---> System.Net.Sockets.SocketException: Bağlanılan uygun olarak belli bir süre içinde yanıt vermediğinden veya kurulan
+bağlantı bağlanılan ana bilgisayar yanıt vermediğinden bir bağlantı kurulamadı
+   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- İç özel durum yığını izlemesinin sonu ---
+   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   konum: EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   konum: CAY_Weighing.Communication.GetMessage() C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\Communication.cs içinde: satır 85
+27.04.2023 23:51:35 - #Info - Disconnected 127.0.0.1:503
+27.04.2023 23:51:39 - #Info - Connected 127.0.0.1:503
+27.04.2023 23:51:41 - #Error - System.IO.IOException: Aktarma bağlantısından veriler okunamadı: Bağlanılan uygun olarak belli bir süre içinde yanıt vermediğinden veya kurulan
+bağlantı bağlanılan ana bilgisayar yanıt vermediğinden bir bağlantı kurulamadı. ---> System.Net.Sockets.SocketException: Bağlanılan uygun olarak belli bir süre içinde yanıt vermediğinden veya kurulan
+bağlantı bağlanılan ana bilgisayar yanıt vermediğinden bir bağlantı kurulamadı
+   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- İç özel durum yığını izlemesinin sonu ---
+   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   konum: EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   konum: CAY_Weighing.Communication.GetMessage() C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\Communication.cs içinde: satır 85
+27.04.2023 23:51:41 - #Info - Disconnected 127.0.0.1:503
+27.04.2023 23:51:45 - #Info - Connected 127.0.0.1:503
+27.04.2023 23:51:47 - #Error - System.IO.IOException: Aktarma bağlantısından veriler okunamadı: Bağlanılan uygun olarak belli bir süre içinde yanıt vermediğinden veya kurulan
+bağlantı bağlanılan ana bilgisayar yanıt vermediğinden bir bağlantı kurulamadı. ---> System.Net.Sockets.SocketException: Bağlanılan uygun olarak belli bir süre içinde yanıt vermediğinden veya kurulan
+bağlantı bağlanılan ana bilgisayar yanıt vermediğinden bir bağlantı kurulamadı
+   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- İç özel durum yığını izlemesinin sonu ---
+   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   konum: EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   konum: CAY_Weighing.Communication.GetMessage() C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\Communication.cs içinde: satır 85
+27.04.2023 23:51:47 - #Info - Disconnected 127.0.0.1:503
+27.04.2023 23:51:51 - #Info - Connected 127.0.0.1:503
+27.04.2023 23:51:53 - #Error - System.IO.IOException: Aktarma bağlantısından veriler okunamadı: Bağlanılan uygun olarak belli bir süre içinde yanıt vermediğinden veya kurulan
+bağlantı bağlanılan ana bilgisayar yanıt vermediğinden bir bağlantı kurulamadı. ---> System.Net.Sockets.SocketException: Bağlanılan uygun olarak belli bir süre içinde yanıt vermediğinden veya kurulan
+bağlantı bağlanılan ana bilgisayar yanıt vermediğinden bir bağlantı kurulamadı
+   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- İç özel durum yığını izlemesinin sonu ---
+   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   konum: EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   konum: CAY_Weighing.Communication.GetMessage() C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\Communication.cs içinde: satır 85
+27.04.2023 23:51:53 - #Info - Disconnected 127.0.0.1:503
+27.04.2023 23:52:03 - #Info - Connected 127.0.0.1:503
+27.04.2023 23:52:15 - #Error - System.IO.IOException: Aktarma bağlantısından veriler okunamadı: Bağlanılan uygun olarak belli bir süre içinde yanıt vermediğinden veya kurulan
+bağlantı bağlanılan ana bilgisayar yanıt vermediğinden bir bağlantı kurulamadı. ---> System.Net.Sockets.SocketException: Bağlanılan uygun olarak belli bir süre içinde yanıt vermediğinden veya kurulan
+bağlantı bağlanılan ana bilgisayar yanıt vermediğinden bir bağlantı kurulamadı
+   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- İç özel durum yığını izlemesinin sonu ---
+   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   konum: EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   konum: CAY_Weighing.Communication.GetMessage() C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\Communication.cs içinde: satır 85
+27.04.2023 23:52:15 - #Info - Disconnected 127.0.0.1:503
+27.04.2023 23:52:19 - #Info - Connected 127.0.0.1:503
+27.04.2023 23:52:21 - #Error - System.IO.IOException: Aktarma bağlantısından veriler okunamadı: Bağlanılan uygun olarak belli bir süre içinde yanıt vermediğinden veya kurulan
+bağlantı bağlanılan ana bilgisayar yanıt vermediğinden bir bağlantı kurulamadı. ---> System.Net.Sockets.SocketException: Bağlanılan uygun olarak belli bir süre içinde yanıt vermediğinden veya kurulan
+bağlantı bağlanılan ana bilgisayar yanıt vermediğinden bir bağlantı kurulamadı
+   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- İç özel durum yığını izlemesinin sonu ---
+   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   konum: EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   konum: CAY_Weighing.Communication.GetMessage() C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\Communication.cs içinde: satır 85
+27.04.2023 23:52:21 - #Info - Disconnected 127.0.0.1:503
+27.04.2023 23:54:01 - #Info - Connected 127.0.0.1:503
+27.04.2023 23:54:13 - #Error - System.IO.IOException: Aktarma bağlantısından veriler okunamadı: Bağlanılan uygun olarak belli bir süre içinde yanıt vermediğinden veya kurulan
+bağlantı bağlanılan ana bilgisayar yanıt vermediğinden bir bağlantı kurulamadı. ---> System.Net.Sockets.SocketException: Bağlanılan uygun olarak belli bir süre içinde yanıt vermediğinden veya kurulan
+bağlantı bağlanılan ana bilgisayar yanıt vermediğinden bir bağlantı kurulamadı
+   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- İç özel durum yığını izlemesinin sonu ---
+   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   konum: EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   konum: CAY_Weighing.Communication.GetMessage() C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\Communication.cs içinde: satır 85
+27.04.2023 23:54:13 - #Info - Disconnected 127.0.0.1:503
+27.04.2023 23:54:29 - #Info - Connected 127.0.0.1:503
+27.04.2023 23:54:41 - #Error - System.IO.IOException: Aktarma bağlantısından veriler okunamadı: Bağlanılan uygun olarak belli bir süre içinde yanıt vermediğinden veya kurulan
+bağlantı bağlanılan ana bilgisayar yanıt vermediğinden bir bağlantı kurulamadı. ---> System.Net.Sockets.SocketException: Bağlanılan uygun olarak belli bir süre içinde yanıt vermediğinden veya kurulan
+bağlantı bağlanılan ana bilgisayar yanıt vermediğinden bir bağlantı kurulamadı
+   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- İç özel durum yığını izlemesinin sonu ---
+   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   konum: EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   konum: CAY_Weighing.Communication.GetMessage() C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\Communication.cs içinde: satır 85
+27.04.2023 23:54:41 - #Info - Disconnected 127.0.0.1:503
+27.04.2023 23:54:45 - #Info - Connected 127.0.0.1:503
+27.04.2023 23:54:47 - #Error - System.IO.IOException: Aktarma bağlantısından veriler okunamadı: Bağlanılan uygun olarak belli bir süre içinde yanıt vermediğinden veya kurulan
+bağlantı bağlanılan ana bilgisayar yanıt vermediğinden bir bağlantı kurulamadı. ---> System.Net.Sockets.SocketException: Bağlanılan uygun olarak belli bir süre içinde yanıt vermediğinden veya kurulan
+bağlantı bağlanılan ana bilgisayar yanıt vermediğinden bir bağlantı kurulamadı
+   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- İç özel durum yığını izlemesinin sonu ---
+   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   konum: EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   konum: CAY_Weighing.Communication.GetMessage() C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\Communication.cs içinde: satır 85
+27.04.2023 23:54:47 - #Info - Disconnected 127.0.0.1:503
+27.04.2023 23:54:51 - #Info - Connected 127.0.0.1:503
+27.04.2023 23:56:18 - #Info - Connected 127.0.0.1:503
+27.04.2023 23:56:29 - #Error - System.IO.IOException: Aktarma bağlantısından veriler okunamadı: Bağlanılan uygun olarak belli bir süre içinde yanıt vermediğinden veya kurulan
+bağlantı bağlanılan ana bilgisayar yanıt vermediğinden bir bağlantı kurulamadı. ---> System.Net.Sockets.SocketException: Bağlanılan uygun olarak belli bir süre içinde yanıt vermediğinden veya kurulan
+bağlantı bağlanılan ana bilgisayar yanıt vermediğinden bir bağlantı kurulamadı
+   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- İç özel durum yığını izlemesinin sonu ---
+   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   konum: EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   konum: CAY_Weighing.Communication.GetMessage() C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\Communication.cs içinde: satır 85
+27.04.2023 23:56:29 - #Info - Disconnected 127.0.0.1:503
+27.04.2023 23:57:42 - #Info - Connected 127.0.0.1:503
+27.04.2023 23:57:53 - #Error - System.IO.IOException: Aktarma bağlantısından veriler okunamadı: Bağlanılan uygun olarak belli bir süre içinde yanıt vermediğinden veya kurulan
+bağlantı bağlanılan ana bilgisayar yanıt vermediğinden bir bağlantı kurulamadı. ---> System.Net.Sockets.SocketException: Bağlanılan uygun olarak belli bir süre içinde yanıt vermediğinden veya kurulan
+bağlantı bağlanılan ana bilgisayar yanıt vermediğinden bir bağlantı kurulamadı
+   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- İç özel durum yığını izlemesinin sonu ---
+   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   konum: EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   konum: CAY_Weighing.Communication.GetMessage() C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\Communication.cs içinde: satır 85
+27.04.2023 23:57:53 - #Info - Disconnected 127.0.0.1:503
+28.04.2023 00:00:32 - #Info - Connected 127.0.0.1:503
+28.04.2023 00:00:44 - #Error - Disconnect Error on 127.0.0.1:503
+System.Threading.Tasks.TaskCanceledException: Bir görev iptal edildi.
+   konum: System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   konum: System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   konum: System.Windows.Threading.DispatcherOperation.Wait(TimeSpan timeout)
+   konum: System.Windows.Threading.Dispatcher.InvokeImpl(DispatcherOperation operation, CancellationToken cancellationToken, TimeSpan timeout)
+   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback, DispatcherPriority priority, CancellationToken cancellationToken, TimeSpan timeout)
+   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback)
+   konum: CAY_Weighing.MainWindow.ModbusComm_ConnectedChanged(Object sender, ConnectedChangedEventArgs e)
+   konum: CAY_Weighing.Communication.OnConnectedChanged(ConnectedChangedEventArgs e)
+   konum: CAY_Weighing.Communication.set_Connected(Boolean value)
+   konum: CAY_Weighing.Communication.Disconnect()
+28.04.2023 00:01:06 - #Info - Connected 127.0.0.1:503
+28.04.2023 00:01:17 - #Error - System.IO.IOException: Aktarma bağlantısından veriler okunamadı: Bağlanılan uygun olarak belli bir süre içinde yanıt vermediğinden veya kurulan
+bağlantı bağlanılan ana bilgisayar yanıt vermediğinden bir bağlantı kurulamadı. ---> System.Net.Sockets.SocketException: Bağlanılan uygun olarak belli bir süre içinde yanıt vermediğinden veya kurulan
+bağlantı bağlanılan ana bilgisayar yanıt vermediğinden bir bağlantı kurulamadı
+   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- İç özel durum yığını izlemesinin sonu ---
+   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   konum: EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   konum: CAY_Weighing.Communication.GetMessage() C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\Communication.cs içinde: satır 85
+28.04.2023 00:01:17 - #Info - Disconnected 127.0.0.1:503
+28.04.2023 00:01:32 - #Info - Connected 127.0.0.1:503
+28.04.2023 00:01:36 - #Error - System.IO.IOException: Aktarma bağlantısından veriler okunamadı: Bağlanılan uygun olarak belli bir süre içinde yanıt vermediğinden veya kurulan
+bağlantı bağlanılan ana bilgisayar yanıt vermediğinden bir bağlantı kurulamadı. ---> System.Net.Sockets.SocketException: Bağlanılan uygun olarak belli bir süre içinde yanıt vermediğinden veya kurulan
+bağlantı bağlanılan ana bilgisayar yanıt vermediğinden bir bağlantı kurulamadı
+   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- İç özel durum yığını izlemesinin sonu ---
+   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   konum: EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   konum: CAY_Weighing.Communication.GetMessage() C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\Communication.cs içinde: satır 85
+28.04.2023 00:01:36 - #Info - Disconnected 127.0.0.1:503
+28.04.2023 00:01:40 - #Info - Connected 127.0.0.1:503
+28.04.2023 00:01:40 - #Error - Disconnect Error on 127.0.0.1:503
+System.Threading.Tasks.TaskCanceledException: Bir görev iptal edildi.
+   konum: System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   konum: System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   konum: System.Windows.Threading.DispatcherOperation.Wait(TimeSpan timeout)
+   konum: System.Windows.Threading.Dispatcher.InvokeImpl(DispatcherOperation operation, CancellationToken cancellationToken, TimeSpan timeout)
+   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback, DispatcherPriority priority, CancellationToken cancellationToken, TimeSpan timeout)
+   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback)
+   konum: CAY_Weighing.MainWindow.ModbusComm_ConnectedChanged(Object sender, ConnectedChangedEventArgs e)
+   konum: CAY_Weighing.Communication.OnConnectedChanged(ConnectedChangedEventArgs e)
+   konum: CAY_Weighing.Communication.set_Connected(Boolean value)
+   konum: CAY_Weighing.Communication.Disconnect()
+28.04.2023 00:02:07 - #Info - Connected 127.0.0.1:503
+28.04.2023 00:02:56 - #Info - Connected 127.0.0.1:503
+28.04.2023 00:03:20 - #Error - Disconnect Error on 127.0.0.1:503
+System.Threading.Tasks.TaskCanceledException: Bir görev iptal edildi.
+   konum: System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   konum: System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   konum: System.Windows.Threading.DispatcherOperation.Wait(TimeSpan timeout)
+   konum: System.Windows.Threading.Dispatcher.InvokeImpl(DispatcherOperation operation, CancellationToken cancellationToken, TimeSpan timeout)
+   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback, DispatcherPriority priority, CancellationToken cancellationToken, TimeSpan timeout)
+   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback)
+   konum: CAY_Weighing.MainWindow.ModbusComm_ConnectedChanged(Object sender, ConnectedChangedEventArgs e)
+   konum: CAY_Weighing.Communication.OnConnectedChanged(ConnectedChangedEventArgs e)
+   konum: CAY_Weighing.Communication.set_Connected(Boolean value)
+   konum: CAY_Weighing.Communication.Disconnect()
+28.04.2023 00:04:19 - #Info - Connected 127.0.0.1:503
+28.04.2023 00:04:34 - #Error - Disconnect Error on 127.0.0.1:503
+System.Threading.Tasks.TaskCanceledException: Bir görev iptal edildi.
+   konum: System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   konum: System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   konum: System.Windows.Threading.DispatcherOperation.Wait(TimeSpan timeout)
+   konum: System.Windows.Threading.Dispatcher.InvokeImpl(DispatcherOperation operation, CancellationToken cancellationToken, TimeSpan timeout)
+   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback, DispatcherPriority priority, CancellationToken cancellationToken, TimeSpan timeout)
+   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback)
+   konum: CAY_Weighing.MainWindow.ModbusComm_ConnectedChanged(Object sender, ConnectedChangedEventArgs e)
+   konum: CAY_Weighing.Communication.OnConnectedChanged(ConnectedChangedEventArgs e)
+   konum: CAY_Weighing.Communication.set_Connected(Boolean value)
+   konum: CAY_Weighing.Communication.Disconnect()

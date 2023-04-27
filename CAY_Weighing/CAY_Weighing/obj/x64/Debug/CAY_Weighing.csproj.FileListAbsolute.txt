@@ -23,3 +23,4 @@ C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva
 C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\obj\x64\Debug\CAY_Weighing.csproj.CopyComplete
 C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\obj\x64\Debug\CAY_Weighing.exe
 C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\obj\x64\Debug\CAY_Weighing.pdb
+C:\Users\Şerif Aksoy\Desktop\Masaüstü Klasörleri\Freelance Software\CAS\Liva Çay\CAY_Weighing\CAY_Weighing\bin\x64\Debug\App.config

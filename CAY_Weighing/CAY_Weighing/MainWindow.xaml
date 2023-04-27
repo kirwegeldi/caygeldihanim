@@ -207,6 +207,7 @@
                     </Button.Template>
                 </Button>
                 <Canvas Grid.Column="0" Grid.Row="1" Name="CanvasSilo1" Uid="1" Width="100"  Margin="20,20,0,-20" HorizontalAlignment="Left" Grid.ColumnSpan="2">
+                    <Label HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="15" Height="30" Width="79"  Content="{Binding BrutWeight}" VerticalAlignment="Center" Canvas.Top="142" Foreground="#FFF0EAEA" Canvas.Left="10" Panel.ZIndex="1"/>
                     <Rectangle  Stroke="DarkSlateGray" StrokeThickness="1" Opacity="0.85" Canvas.Top="16" Width="99" HorizontalAlignment="Center" VerticalAlignment="Top" Height="134">
                         <Rectangle.Fill>
                             <LinearGradientBrush StartPoint="0,0" EndPoint="0.5,0" SpreadMethod="Reflect">
@@ -216,7 +217,7 @@
                         </Rectangle.Fill>
                     </Rectangle>
                     <Path Stroke="Black" StrokeThickness="0.3"
-                        Data="M 20,150 A 50,50 0 0 1 70,100 H 180 A 50,50 0 0 1 230,150 V 250 A 50,50 0 0 1 180,300 H 70 A 50,50 0 0 1 20,250 Z" Stretch="Fill" Opacity="0.85" RenderTransformOrigin="0.5,0.5" Height="10.437" Canvas.Top="150" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="-0.5">
+                        Data="M 20,150 A 50,50 0 0 1 70,100 H 180 A 50,50 0 0 1 230,150 V 250 A 50,50 0 0 1 180,300 H 70 A 50,50 0 0 1 20,250 Z" Stretch="Fill" Opacity="0.85" RenderTransformOrigin="0.5,0.5" Height="16" Canvas.Top="150" Width="100" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="-0.5">
                         <Path.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform ScaleY="-1"/>
@@ -374,7 +375,7 @@
                             </LinearGradientBrush>
                         </Rectangle.Fill>
                     </Rectangle>
-                    <Label HorizontalAlignment="Left" HorizontalContentAlignment="Center" FontSize="40" Height="60" Width="120"  Content="{Binding CurrentWeight}" VerticalAlignment="Center" Canvas.Top="172" Foreground="#FFF0EAEA" Canvas.Left="2"/>
+                    <Label HorizontalAlignment="Left" HorizontalContentAlignment="Center" FontSize="40" Height="60" Width="132"  Content="{Binding CurrentWeight}" VerticalAlignment="Center" Canvas.Top="172" Foreground="#FFF0EAEA" Canvas.Left="2"/>
                     <Label HorizontalAlignment="Left" FontSize="15" VerticalAlignment="Center" Height="30" Width="30" Canvas.Left="130" Canvas.Top="197" Foreground="#FFF0EAEA" Content="kg"/>
                     <TextBlock x:Name="SiloName1" HorizontalAlignment="Left" FontSize="27" Height="33" TextWrapping="Wrap" Foreground="{Binding ConnectionColor}" VerticalAlignment="Center" Width="106" Canvas.Left="108" Canvas.Top="-23" RenderTransformOrigin="-0.15,0.541"><Run Text="S"/><Run Language="tr-tr" Text="İLO"/><Run Text=" 1"/></TextBlock>
                     <CheckBox Uid="0" IsChecked="True" Canvas.Left="107" Width="89" Canvas.Top="9" Content="Enable" Click="Enable_Click" Foreground="White"/>
@@ -389,7 +390,7 @@
                         </Rectangle.Fill>
                     </Rectangle>
                     <Path Stroke="Black" StrokeThickness="0.3"
-                        Data="M 20,150 A 50,50 0 0 1 70,100 H 180 A 50,50 0 0 1 230,150 V 250 A 50,50 0 0 1 180,300 H 70 A 50,50 0 0 1 20,250 Z" Stretch="Fill" Opacity="0.85" RenderTransformOrigin="0.5,0.5" Height="10.437" Canvas.Top="150" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="-0.5">
+                        Data="M 20,150 A 50,50 0 0 1 70,100 H 180 A 50,50 0 0 1 230,150 V 250 A 50,50 0 0 1 180,300 H 70 A 50,50 0 0 1 20,250 Z" Stretch="Fill" Opacity="0.85" RenderTransformOrigin="0.5,0.5" Height="15" Canvas.Top="150" Width="100" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="-0.5">
                         <Path.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform ScaleY="-1"/>
@@ -547,10 +548,11 @@
                             </LinearGradientBrush>
                         </Rectangle.Fill>
                     </Rectangle>
-                    <Label HorizontalAlignment="Left" HorizontalContentAlignment="Center" FontSize="40" Height="60" Width="120"  Content="{Binding CurrentWeight}" VerticalAlignment="Center" Canvas.Top="172" Foreground="#FFF0EAEA" Canvas.Left="2"/>
+                    <Label HorizontalAlignment="Left" HorizontalContentAlignment="Center" FontSize="40" Height="60" Width="132"  Content="{Binding CurrentWeight}" VerticalAlignment="Center" Canvas.Top="172" Foreground="#FFF0EAEA" Canvas.Left="2"/>
                     <Label HorizontalAlignment="Left" FontSize="15" VerticalAlignment="Center" Height="30" Width="30" Canvas.Left="130" Canvas.Top="197" Foreground="#FFF0EAEA" Content="kg"/>
                     <TextBlock x:Name="SiloName2" HorizontalAlignment="Left" FontSize="25" Height="30" TextWrapping="Wrap" Foreground="{Binding ConnectionColor}" VerticalAlignment="Center" Width="88" Canvas.Left="108" Canvas.Top="-23" RenderTransformOrigin="-0.15,0.541"><Run Text="S"/><Run Language="tr-tr" Text="İ"/><Run Text="LO"/><Run Text=" 2"/></TextBlock>
                     <CheckBox Uid="1" IsChecked="True" Canvas.Left="107" Width="89" Canvas.Top="9" Content="Enable" Click="Enable_Click" Foreground="White"/>
+                    <Label HorizontalContentAlignment="Center" FontSize="15" Height="30" Width="79"  Content="{Binding BrutWeight}" Canvas.Top="142" Foreground="#FFF0EAEA" Canvas.Left="10" Panel.ZIndex="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </Canvas>
                 <Canvas Grid.Column="2" Grid.Row="1" Name="CanvasSilo3" Uid="3" Width="100" Margin="20,20,0,-20" HorizontalAlignment="Left">
                     <Rectangle  Stroke="DarkSlateGray" StrokeThickness="1" Opacity="0.85" Canvas.Top="16" Width="99" HorizontalAlignment="Center" VerticalAlignment="Top" Height="134">
@@ -562,7 +564,7 @@
                         </Rectangle.Fill>
                     </Rectangle>
                     <Path Stroke="Black" StrokeThickness="0.3"
-                        Data="M 20,150 A 50,50 0 0 1 70,100 H 180 A 50,50 0 0 1 230,150 V 250 A 50,50 0 0 1 180,300 H 70 A 50,50 0 0 1 20,250 Z" Stretch="Fill" Opacity="0.85" RenderTransformOrigin="0.5,0.5" Height="10.437" Canvas.Top="150" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="-0.5">
+                        Data="M 20,150 A 50,50 0 0 1 70,100 H 180 A 50,50 0 0 1 230,150 V 250 A 50,50 0 0 1 180,300 H 70 A 50,50 0 0 1 20,250 Z" Stretch="Fill" Opacity="0.85" RenderTransformOrigin="0.5,0.5" Height="15" Canvas.Top="150" Width="100" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="-0.5">
                         <Path.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform ScaleY="-1"/>
@@ -720,10 +722,11 @@
                             </LinearGradientBrush>
                         </Rectangle.Fill>
                     </Rectangle>
-                    <Label HorizontalAlignment="Left" HorizontalContentAlignment="Center" FontSize="40" Height="60" Width="120"  Content="{Binding CurrentWeight}" VerticalAlignment="Center" Canvas.Top="172" Foreground="#FFF0EAEA" Canvas.Left="2"/>
+                    <Label HorizontalAlignment="Left" HorizontalContentAlignment="Center" FontSize="40" Height="60" Width="132"  Content="{Binding CurrentWeight}" VerticalAlignment="Center" Canvas.Top="172" Foreground="#FFF0EAEA" Canvas.Left="2"/>
                     <Label HorizontalAlignment="Left" FontSize="15" VerticalAlignment="Center" Height="30" Width="30" Canvas.Left="130" Canvas.Top="197" Foreground="#FFF0EAEA" Content="kg"/>
                     <TextBlock x:Name="SiloName3" HorizontalAlignment="Left" FontSize="25" Height="30" TextWrapping="Wrap" Foreground="{Binding ConnectionColor}" VerticalAlignment="Center" Width="88" Canvas.Left="108" Canvas.Top="-23" RenderTransformOrigin="-0.15,0.541"><Run Text="S"/><Run Language="tr-tr" Text="İ"/><Run Text="LO"/><Run Text=" 3"/></TextBlock>
                     <CheckBox Uid="2" IsChecked="True" Canvas.Left="107" Width="89" Canvas.Top="9" Content="Enable" Click="Enable_Click" Foreground="White"/>
+                    <Label HorizontalContentAlignment="Center" FontSize="15" Height="30" Width="79"  Content="{Binding BrutWeight}" Canvas.Top="142" Foreground="#FFF0EAEA" Canvas.Left="10" Panel.ZIndex="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </Canvas>
                 <Canvas Grid.Column="3" Grid.Row="1" Name="CanvasSilo4" Uid="4" Width="100"  Margin="20,20,0,-20" HorizontalAlignment="Left">
                     <Rectangle  Stroke="DarkSlateGray" StrokeThickness="1" Opacity="0.85" Canvas.Top="16" Width="99" HorizontalAlignment="Center" VerticalAlignment="Top" Height="134">
@@ -735,7 +738,7 @@
                         </Rectangle.Fill>
                     </Rectangle>
                     <Path Stroke="Black" StrokeThickness="0.3"
-                        Data="M 20,150 A 50,50 0 0 1 70,100 H 180 A 50,50 0 0 1 230,150 V 250 A 50,50 0 0 1 180,300 H 70 A 50,50 0 0 1 20,250 Z" Stretch="Fill" Opacity="0.85" RenderTransformOrigin="0.5,0.5" Height="10.437" Canvas.Top="150" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="-0.5">
+                        Data="M 20,150 A 50,50 0 0 1 70,100 H 180 A 50,50 0 0 1 230,150 V 250 A 50,50 0 0 1 180,300 H 70 A 50,50 0 0 1 20,250 Z" Stretch="Fill" Opacity="0.85" RenderTransformOrigin="0.5,0.5" Height="15" Canvas.Top="150" Width="100" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="-0.5">
                         <Path.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform ScaleY="-1"/>
@@ -893,10 +896,11 @@
                             </LinearGradientBrush>
                         </Rectangle.Fill>
                     </Rectangle>
-                    <Label HorizontalAlignment="Left" HorizontalContentAlignment="Center" FontSize="40" Height="60" Width="120"  Content="{Binding CurrentWeight}" VerticalAlignment="Center" Canvas.Top="172" Foreground="#FFF0EAEA" Canvas.Left="2"/>
+                    <Label HorizontalAlignment="Left" HorizontalContentAlignment="Center" FontSize="40" Height="60" Width="132"  Content="{Binding CurrentWeight}" VerticalAlignment="Center" Canvas.Top="172" Foreground="#FFF0EAEA" Canvas.Left="2"/>
                     <Label HorizontalAlignment="Left" FontSize="15" VerticalAlignment="Center" Height="30" Width="30" Canvas.Left="130" Canvas.Top="197" Foreground="#FFF0EAEA" Content="kg"/>
                     <TextBlock x:Name="SiloName4" HorizontalAlignment="Left" FontSize="25" Height="30" TextWrapping="Wrap" Foreground="{Binding ConnectionColor}" VerticalAlignment="Center" Width="88" Canvas.Left="108" Canvas.Top="-23" RenderTransformOrigin="-0.15,0.541"><Run Text="S"/><Run Language="tr-tr" Text="İ"/><Run Text="LO"/><Run Text=" 4"/></TextBlock>
                     <CheckBox Uid="3" IsChecked="True" Canvas.Left="107" Width="89" Canvas.Top="9" Content="Enable" Click="Enable_Click" Foreground="White"/>
+                    <Label HorizontalContentAlignment="Center" FontSize="15" Height="30" Width="79"  Content="{Binding BrutWeight}" Canvas.Top="142" Foreground="#FFF0EAEA" Canvas.Left="10" Panel.ZIndex="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </Canvas>
                 <Canvas Grid.Column="4" Grid.Row="1" Name="CanvasMixer1" Uid="9" Height="143" Width="129" Margin="42,30,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
                     <Rectangle  Stroke="DarkSlateGray" StrokeThickness="1" Opacity="0.85" Height="133" Canvas.Top="11" Width="130">
@@ -941,7 +945,7 @@
                             </LinearGradientBrush>
                         </Ellipse.Fill>
                     </Ellipse>
-                    <Rectangle Stroke="DarkSlateGray" StrokeThickness="3" Opacity="0.2" Height="76" Canvas.Top="154" Width="161" Canvas.Left="-9" HorizontalAlignment="Center" VerticalAlignment="Top">
+                    <Rectangle Stroke="DarkSlateGray" StrokeThickness="3" Opacity="0.2" Height="76" Canvas.Top="154" Width="170" Canvas.Left="-18" HorizontalAlignment="Center" VerticalAlignment="Top">
                         <Rectangle.Fill>
                             <LinearGradientBrush StartPoint="0.5,1" EndPoint="0.5,0">
                                 <GradientStop Color="Black" Offset="0"/>
@@ -950,7 +954,7 @@
                             </LinearGradientBrush>
                         </Rectangle.Fill>
                     </Rectangle>
-                    <Label HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="40" Height="60" Width="120" Content="{Binding CurrentWeight}" VerticalAlignment="Top" Canvas.Top="162" Foreground="#FFF0EAEA" Canvas.Left="2"/>
+                    <Label HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="40" Height="60" Width="132" Content="{Binding CurrentWeight}" VerticalAlignment="Top" Canvas.Top="162" Foreground="#FFF0EAEA" Canvas.Left="-11"/>
                     <Label HorizontalAlignment="Center" FontSize="15" VerticalAlignment="Top" Height="30" Width="30" Canvas.Left="119" Canvas.Top="190" Foreground="#FFF0EAEA" Content="kg"/>
                     <Label x:Name="MixerName1" FontSize="25" Height="41" Content="TANK 1" Foreground="{Binding ConnectionColor}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="90" Canvas.Left="23" Canvas.Top="-67" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                     <CheckBox Uid="8" IsChecked="True" Canvas.Left="37" Width="59" Canvas.Top="-31" Content="Enable" Click="Enable_Click" VerticalContentAlignment="Center" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
@@ -997,7 +1001,7 @@
                         </Rectangle.Fill>
                     </Rectangle>
                     <Path Stroke="Black" StrokeThickness="0.3"
-                        Data="M 20,150 A 50,50 0 0 1 70,100 H 180 A 50,50 0 0 1 230,150 V 250 A 50,50 0 0 1 180,300 H 70 A 50,50 0 0 1 20,250 Z" Stretch="Fill" Opacity="0.85" RenderTransformOrigin="0.5,0.5" Height="10.437" Canvas.Top="150" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="-0.5">
+                        Data="M 20,150 A 50,50 0 0 1 70,100 H 180 A 50,50 0 0 1 230,150 V 250 A 50,50 0 0 1 180,300 H 70 A 50,50 0 0 1 20,250 Z" Stretch="Fill" Opacity="0.85" RenderTransformOrigin="0.5,0.5" Height="18" Canvas.Top="147.832" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="-0.5">
                         <Path.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform ScaleY="-1"/>
@@ -1155,10 +1159,11 @@
                             </LinearGradientBrush>
                         </Rectangle.Fill>
                     </Rectangle>
-                    <Label HorizontalAlignment="Left" HorizontalContentAlignment="Center" FontSize="40" Height="60" Width="120"  Content="{Binding CurrentWeight}" VerticalAlignment="Center" Canvas.Top="172" Foreground="#FFF0EAEA" Canvas.Left="2"/>
+                    <Label HorizontalAlignment="Left" HorizontalContentAlignment="Center" FontSize="40" Height="60" Width="132"  Content="{Binding CurrentWeight}" VerticalAlignment="Center" Canvas.Top="172" Foreground="#FFF0EAEA" Canvas.Left="2"/>
                     <Label HorizontalAlignment="Left" FontSize="15" VerticalAlignment="Center" Height="30" Width="30" Canvas.Left="130" Canvas.Top="197" Foreground="#FFF0EAEA" Content="kg"/>
                     <TextBlock x:Name="SiloName5" HorizontalAlignment="Left" FontSize="27" Height="33" TextWrapping="Wrap" Foreground="{Binding ConnectionColor}" VerticalAlignment="Center" Width="106" Canvas.Left="108" Canvas.Top="-23" RenderTransformOrigin="-0.15,0.541"><Run Text="S"/><Run Language="tr-tr" Text="İ"/><Run Text="LO"/><Run Text=" "/><Run Text="1"/></TextBlock>
                     <CheckBox Uid="4" IsChecked="True" Canvas.Left="107" Width="89" Canvas.Top="9" Content="Enable" Click="Enable_Click" Foreground="White"/>
+                    <Label HorizontalContentAlignment="Center" FontSize="15" Height="30" Width="79"  Content="{Binding BrutWeight}" Canvas.Top="142" Foreground="#FFF0EAEA" Canvas.Left="10" Panel.ZIndex="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </Canvas>
                 <Canvas Grid.Column="1" Grid.Row="1" Name="CanvasSilo6" Uid="6" Width="100" Margin="20,20,0,-19" HorizontalAlignment="Left">
                     <Rectangle  Stroke="DarkSlateGray" StrokeThickness="1" Opacity="0.85" Canvas.Top="16" Width="99" HorizontalAlignment="Center" VerticalAlignment="Top" Height="134">
@@ -1170,7 +1175,7 @@
                         </Rectangle.Fill>
                     </Rectangle>
                     <Path Stroke="Black" StrokeThickness="0.3"
-                        Data="M 20,150 A 50,50 0 0 1 70,100 H 180 A 50,50 0 0 1 230,150 V 250 A 50,50 0 0 1 180,300 H 70 A 50,50 0 0 1 20,250 Z" Stretch="Fill" Opacity="0.85" RenderTransformOrigin="0.5,0.5" Height="10.437" Canvas.Top="150" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="-0.5">
+                        Data="M 20,150 A 50,50 0 0 1 70,100 H 180 A 50,50 0 0 1 230,150 V 250 A 50,50 0 0 1 180,300 H 70 A 50,50 0 0 1 20,250 Z" Stretch="Fill" Opacity="0.85" RenderTransformOrigin="0.5,0.5" Height="18" Canvas.Top="147.669" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="-0.5">
                         <Path.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform ScaleY="-1"/>
@@ -1328,10 +1333,11 @@
                             </LinearGradientBrush>
                         </Rectangle.Fill>
                     </Rectangle>
-                    <Label HorizontalAlignment="Left" HorizontalContentAlignment="Center" FontSize="40" Height="60" Width="120"  Content="{Binding CurrentWeight}" VerticalAlignment="Center" Canvas.Top="172" Foreground="#FFF0EAEA" Canvas.Left="2"/>
+                    <Label HorizontalAlignment="Left" HorizontalContentAlignment="Center" FontSize="40" Height="60" Width="132"  Content="{Binding CurrentWeight}" VerticalAlignment="Center" Canvas.Top="172" Foreground="#FFF0EAEA" Canvas.Left="2"/>
                     <Label HorizontalAlignment="Left" FontSize="15" VerticalAlignment="Center" Height="30" Width="30" Canvas.Left="130" Canvas.Top="197" Foreground="#FFF0EAEA" Content="kg"/>
                     <TextBlock x:Name="SiloName6" HorizontalAlignment="Left" FontSize="25" Height="30" TextWrapping="Wrap" Foreground="{Binding ConnectionColor}" VerticalAlignment="Center" Width="88" Canvas.Left="108" Canvas.Top="-23" RenderTransformOrigin="-0.15,0.541"><Run Text="S"/><Run Text="İ"/><Run Text="LO"/><Run Text=" "/><Run Language="tr-tr" Text="2"/></TextBlock>
                     <CheckBox Uid="5" IsChecked="True" Canvas.Left="107" Width="89" Canvas.Top="9" Content="Enable" Click="Enable_Click" Foreground="White"/>
+                    <Label HorizontalContentAlignment="Center" FontSize="15" Height="30" Width="79"  Content="{Binding BrutWeight}" Canvas.Top="142" Foreground="#FFF0EAEA" Canvas.Left="10" Panel.ZIndex="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </Canvas>
                 <Canvas Grid.Column="2" Grid.Row="1" Name="CanvasSilo7" Uid="7" Width="100" Margin="20,20,0,-19" HorizontalAlignment="Left">
                     <Rectangle  Stroke="DarkSlateGray" StrokeThickness="1" Opacity="0.85" Canvas.Top="16" Width="99" HorizontalAlignment="Center" VerticalAlignment="Top" Height="134">
@@ -1343,7 +1349,7 @@
                         </Rectangle.Fill>
                     </Rectangle>
                     <Path Stroke="Black" StrokeThickness="0.3"
-                        Data="M 20,150 A 50,50 0 0 1 70,100 H 180 A 50,50 0 0 1 230,150 V 250 A 50,50 0 0 1 180,300 H 70 A 50,50 0 0 1 20,250 Z" Stretch="Fill" Opacity="0.85" RenderTransformOrigin="0.5,0.5" Height="10.437" Canvas.Top="150" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="-0.5">
+                        Data="M 20,150 A 50,50 0 0 1 70,100 H 180 A 50,50 0 0 1 230,150 V 250 A 50,50 0 0 1 180,300 H 70 A 50,50 0 0 1 20,250 Z" Stretch="Fill" Opacity="0.85" RenderTransformOrigin="0.5,0.5" Height="18" Canvas.Top="147.665" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="-0.5">
                         <Path.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform ScaleY="-1"/>
@@ -1501,10 +1507,11 @@
                             </LinearGradientBrush>
                         </Rectangle.Fill>
                     </Rectangle>
-                    <Label HorizontalAlignment="Left" HorizontalContentAlignment="Center" FontSize="40" Height="60" Width="120"  Content="{Binding CurrentWeight}" VerticalAlignment="Center" Canvas.Top="172" Foreground="#FFF0EAEA" Canvas.Left="2"/>
+                    <Label HorizontalAlignment="Left" HorizontalContentAlignment="Center" FontSize="40" Height="60" Width="132"  Content="{Binding CurrentWeight}" VerticalAlignment="Center" Canvas.Top="172" Foreground="#FFF0EAEA" Canvas.Left="2"/>
                     <Label HorizontalAlignment="Left" FontSize="15" VerticalAlignment="Center" Height="30" Width="30" Canvas.Left="130" Canvas.Top="197" Foreground="#FFF0EAEA" Content="kg"/>
                     <TextBlock x:Name="SiloName7" HorizontalAlignment="Left" FontSize="25" Height="30" TextWrapping="Wrap" Foreground="{Binding ConnectionColor}" VerticalAlignment="Center" Width="88" Canvas.Left="108" Canvas.Top="-23" RenderTransformOrigin="-0.15,0.541"><Run Text="S"/><Run Text="İ"/><Run Text="LO"/><Run Text=" "/><Run Language="tr-tr" Text="3"/></TextBlock>
                     <CheckBox Uid="6" IsChecked="True" Canvas.Left="107" Width="89" Canvas.Top="9" Content="Enable" Click="Enable_Click" Foreground="White"/>
+                    <Label HorizontalContentAlignment="Center" FontSize="15" Height="30" Width="79"  Content="{Binding BrutWeight}" Canvas.Top="142" Foreground="#FFF0EAEA" Canvas.Left="10" Panel.ZIndex="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </Canvas>
                 <Canvas Grid.Column="3" Grid.Row="1" Name="CanvasSilo8" Uid="8" Width="100" Margin="20,20,0,-19" HorizontalAlignment="Left">
                     <Rectangle  Stroke="DarkSlateGray" StrokeThickness="1" Opacity="0.85" Canvas.Top="16" Width="99" HorizontalAlignment="Center" VerticalAlignment="Top" Height="134">
@@ -1516,7 +1523,7 @@
                         </Rectangle.Fill>
                     </Rectangle>
                     <Path Stroke="Black" StrokeThickness="0.3"
-                        Data="M 20,150 A 50,50 0 0 1 70,100 H 180 A 50,50 0 0 1 230,150 V 250 A 50,50 0 0 1 180,300 H 70 A 50,50 0 0 1 20,250 Z" Stretch="Fill" Opacity="0.85" RenderTransformOrigin="0.5,0.5" Height="10.437" Canvas.Top="150" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="-0.5">
+                        Data="M 20,150 A 50,50 0 0 1 70,100 H 180 A 50,50 0 0 1 230,150 V 250 A 50,50 0 0 1 180,300 H 70 A 50,50 0 0 1 20,250 Z" Stretch="Fill" Opacity="0.85" RenderTransformOrigin="0.5,0.5" Height="18" Canvas.Top="147.669" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="-0.5">
                         <Path.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform ScaleY="-1"/>
@@ -1674,10 +1681,11 @@
                             </LinearGradientBrush>
                         </Rectangle.Fill>
                     </Rectangle>
-                    <Label HorizontalAlignment="Left" HorizontalContentAlignment="Center" FontSize="40" Height="60" Width="120"  Content="{Binding CurrentWeight}" VerticalAlignment="Center" Canvas.Top="172" Foreground="#FFF0EAEA" Canvas.Left="2"/>
+                    <Label HorizontalAlignment="Left" HorizontalContentAlignment="Center" FontSize="40" Height="60" Width="132"  Content="{Binding CurrentWeight}" VerticalAlignment="Center" Canvas.Top="172" Foreground="#FFF0EAEA" Canvas.Left="2"/>
                     <Label HorizontalAlignment="Left" FontSize="15" VerticalAlignment="Center" Height="30" Width="30" Canvas.Left="130" Canvas.Top="197" Foreground="#FFF0EAEA" Content="kg"/>
                     <TextBlock x:Name="SiloName8" HorizontalAlignment="Left" FontSize="25" Height="30" TextWrapping="Wrap" Foreground="{Binding ConnectionColor}" VerticalAlignment="Center" Width="88" Canvas.Left="108" Canvas.Top="-23" RenderTransformOrigin="-0.15,0.541"><Run Text="S"/><Run Text="İLO"/><Run Text=" "/><Run Language="tr-tr" Text="4"/></TextBlock>
                     <CheckBox Uid="7" IsChecked="True" Canvas.Left="107" Width="89" Canvas.Top="9" Content="Enable" Click="Enable_Click" Foreground="White"/>
+                    <Label HorizontalContentAlignment="Center" FontSize="15" Height="30" Width="79"  Content="{Binding BrutWeight}" Canvas.Top="142" Foreground="#FFF0EAEA" Canvas.Left="10" Panel.ZIndex="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </Canvas>
                 <Canvas Grid.Column="4" Grid.Row="1" Name="CanvasMixer2" Uid="10" Height="142" Width="129" Margin="42,30,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
                     <Rectangle  Stroke="DarkSlateGray" StrokeThickness="1" Opacity="0.85" Height="133" Canvas.Top="11" Width="130">
@@ -1722,7 +1730,7 @@
                             </LinearGradientBrush>
                         </Ellipse.Fill>
                     </Ellipse>
-                    <Rectangle Stroke="DarkSlateGray" StrokeThickness="3" Opacity="0.2" Height="76" Canvas.Top="153" Width="161" Canvas.Left="-9" HorizontalAlignment="Center" VerticalAlignment="Top">
+                    <Rectangle Stroke="DarkSlateGray" StrokeThickness="3" Opacity="0.2" Height="76" Canvas.Top="153" Width="170" Canvas.Left="-18" HorizontalAlignment="Center" VerticalAlignment="Top">
                         <Rectangle.Fill>
                             <LinearGradientBrush StartPoint="0.5,1" EndPoint="0.5,0">
                                 <GradientStop Color="Black" Offset="0"/>
@@ -1731,7 +1739,7 @@
                             </LinearGradientBrush>
                         </Rectangle.Fill>
                     </Rectangle>
-                    <Label HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="40" Height="60" Width="120" Content="{Binding CurrentWeight}" VerticalAlignment="Top" Canvas.Top="161" Foreground="#FFF0EAEA" Canvas.Left="2"/>
+                    <Label HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="40" Height="60" Width="132" Content="{Binding CurrentWeight}" VerticalAlignment="Top" Canvas.Top="161" Foreground="#FFF0EAEA" Canvas.Left="-9"/>
                     <Label HorizontalAlignment="Center" FontSize="15" VerticalAlignment="Top" Height="30" Width="30" Canvas.Left="119" Canvas.Top="189" Foreground="#FFF0EAEA" Content="kg"/>
                     <Label x:Name="MixerName2" FontSize="25" Height="41" Content="TANK 2" Foreground="{Binding ConnectionColor}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="90" Canvas.Left="23" Canvas.Top="-67" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                     <CheckBox Uid="9" IsChecked="True" Canvas.Left="37" Width="59" Canvas.Top="-31" Content="Enable" Click="Enable_Click" VerticalContentAlignment="Center" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>

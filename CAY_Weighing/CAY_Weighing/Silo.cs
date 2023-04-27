@@ -30,6 +30,7 @@ namespace CAY_Weighing
         public Communication modbusComm { get; set; }
 
         private double _currentWeight;
+        private double _brutWeight;
         public int _valueLow;
         public int _valueHigh;
         private bool _isActive = true;
@@ -76,7 +77,8 @@ namespace CAY_Weighing
             int[] value = modbusComm.GetMessage();
             if (value != null)
             {
-                CurrentWeight = value[0] / 10;
+                CurrentWeight = value[1] / 10.0;
+                BrutWeight = value[0] / 10.0;
                 return CurrentWeight;
             }
             AddRemove(DisconnectedSilos, ConnectedSilos);
@@ -127,7 +129,7 @@ namespace CAY_Weighing
             }
         }
 
-
+        
         public bool Connected
         {
             get => modbusComm._connected;
@@ -148,6 +150,14 @@ namespace CAY_Weighing
                 OnPropertyChanged("CurrentWeight");
             }
         }
+        public double BrutWeight { 
+            get => _brutWeight;
+            set
+            {
+                _brutWeight = value;
+                OnPropertyChanged("BrutWeight");
+            }
+         }
         public int CurrentHeight
         {
             get => (this._ıd ==9 || this._ıd == 10) ? (int)_currentWeight / 13: (int)_currentWeight / 10;

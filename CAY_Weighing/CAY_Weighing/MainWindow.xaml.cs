@@ -90,8 +90,6 @@ namespace CAY_Weighing
                 canvas.DataContext = Silo.AllSilos.FirstOrDefault(s => s._ıd == int.Parse(canvas.Uid));
                 Console.WriteLine(canvas.Name + " ----- " + canvas.DataContext.ToString());
             }
-
-
             PLC.Connect();
             User.LoadUserInfo();
             LoadAllData();
@@ -142,7 +140,6 @@ namespace CAY_Weighing
                     lock (silo)
                     {
                         silo.GetMessage();
-
                     }
                 }
                 catch
@@ -275,15 +272,9 @@ namespace CAY_Weighing
                     case 8:
                         PLC.WriteCoil(8267, result);
                         break;
-
                 }
             }
             catch (Exception ex) { Common.Logger.LogError(ex.ToString()); }
-
-
-
-
-
         }
 
 
