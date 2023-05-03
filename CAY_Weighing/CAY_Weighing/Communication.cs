@@ -19,6 +19,7 @@ namespace CAY_Weighing
         public ModbusClient modbusClient { get; set; }
         public Silo _silo { get; set; }
         public object obj = new object();
+        private bool _clientBusy = false;
         public Communication(Silo silo)
         {
             _id = silo._ıd;
@@ -26,7 +27,7 @@ namespace CAY_Weighing
             _port = silo._port;
             _silo=silo;
             modbusClient = new ModbusClient(_Ip,_port);
-            //modbusClient.UnitIdentifier = (byte)this._id;
+            modbusClient.UnitIdentifier = (byte)this._id;
         }
 
         public Communication()
@@ -39,7 +40,6 @@ namespace CAY_Weighing
                 return true;
             try
             {
-                
                 modbusClient.Connect();
                 Connected = true;
                 Console.WriteLine("Connected {0}:{1}",
@@ -82,7 +82,11 @@ namespace CAY_Weighing
         {
             try
             {
-                return modbusClient.ReadHoldingRegisters(7, 2);
+                while (_clientBusy) ;
+                _clientBusy = true;
+                var result = modbusClient.ReadHoldingRegisters(7, 2);
+                _clientBusy = false;
+                return result;
             }
             catch (Exception ex)
             {
@@ -100,12 +104,16 @@ namespace CAY_Weighing
             }    
             try
             {
+                while (_clientBusy);
+                _clientBusy = true;
                 modbusClient.WriteSingleRegister(register, value);
+                _clientBusy = false;
                 Thread.Sleep(500);
                 return true;
             }
-            catch
+            catch(Exception ex)
             {
+                Common.Logger.LogError(ex.ToString());
                 _silo.Disconnect();
                 return false;
             }
@@ -113,7 +121,7 @@ namespace CAY_Weighing
 
         public bool Connected
         {
-            get { return _connected; }
+            get => _connected;
             set
             {
                 _connected = value;

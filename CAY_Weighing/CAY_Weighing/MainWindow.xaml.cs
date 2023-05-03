@@ -28,14 +28,15 @@ namespace CAY_Weighing
     /// </summary>
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
-        private System.Timers.Timer getterTimer = new System.Timers.Timer();
+        private System.Timers.Timer siloTimer = new System.Timers.Timer();
         private System.Timers.Timer plcTimer = new System.Timers.Timer();
+        private System.Timers.Timer UIUpdateTimer = new System.Timers.Timer();
+        private System.Timers.Timer connectionTimer = new System.Timers.Timer();
         private Dictionary<int, double> FillingInfo = new Dictionary<int, double>();
         private List<Canvas> AllCanvas = new List<Canvas>();
 
         private bool screenLogBusy = false;
         private int screenLogQueue = 0;
-        private int connectionCounter = 0;
 
         public MainWindow()
         {
@@ -55,13 +56,21 @@ namespace CAY_Weighing
         }
         private void Gıybet_Loaded(object sender, RoutedEventArgs e)
         {
-            getterTimer.Elapsed += new ElapsedEventHandler(SiloTimeEvent);
-            getterTimer.Interval = 1000;
-            getterTimer.Enabled = true;
+            siloTimer.Elapsed += new ElapsedEventHandler(SiloTimeEvent);
+            siloTimer.Interval = 200;
+            siloTimer.Enabled = true;
 
             plcTimer.Elapsed += new ElapsedEventHandler(PLCTimeEvent);
             plcTimer.Interval = 1000;
             plcTimer.Enabled = true;
+
+            UIUpdateTimer.Elapsed += new ElapsedEventHandler(UIUpdateEvent);
+            UIUpdateTimer.Interval = 1000;
+            UIUpdateTimer.Enabled = true;
+
+            connectionTimer.Elapsed += new ElapsedEventHandler(ConnectionTimeEvent);
+            connectionTimer.Interval = 5000;
+            connectionTimer.Enabled = true;
         }
         private void Initialize()
         {
@@ -77,6 +86,7 @@ namespace CAY_Weighing
                     Silo.Hat2.Add(silo);
 
                 silo.Connect();
+                Common.Logger.LogInfo("Connecting " + silo._ıd);
                 silo.modbusComm.ConnectedChanged += ModbusComm_ConnectedChanged;
             }
             AllCanvas.Add(CanvasSilo1);
@@ -127,14 +137,18 @@ namespace CAY_Weighing
         private void SiloTimeEvent(object sender, ElapsedEventArgs e)
         {
             GetMessage();
-
-            connectionCounter++;
-            if (connectionCounter > 5)
+        }
+        private void UIUpdateEvent(object sender, ElapsedEventArgs e)
+        {
+            for (int i = 0; i < Silo.ConnectedSilos.Count; i++)
             {
-                ConnectAsync();
-                connectionCounter = 0;
+                var silo = Silo.ConnectedSilos[i];
+                silo.UpdateUI();
             }
-
+        }
+        private void ConnectionTimeEvent(object sender, ElapsedEventArgs e)
+        {
+            ConnectAsync();
         }
         private void GetMessage()
         {
@@ -287,7 +301,7 @@ namespace CAY_Weighing
         private void Zero_Click(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;
-            if (Password())
+            if (true) // şifre girilmesi istenirse true kısmını Password() olarak değiştir.
             {
                 bool done = false;
                 try
@@ -303,7 +317,7 @@ namespace CAY_Weighing
         private void Tare_Click(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;
-            if (Password())
+            if (true) // şifre girilmesi istenirse true kısmını Password() olarak değiştir.
             {
                 bool done = false;
                 try
@@ -319,7 +333,7 @@ namespace CAY_Weighing
         private void Set1_Click(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;
-            if (Password())
+            if (true) // şifre girilmesi istenirse true kısmını Password() olarak değiştir.
             {
                 bool done = false;
                 try
@@ -674,9 +688,10 @@ namespace CAY_Weighing
             PLC.WriteCoil(8256, true);//Stop
             Thread.Sleep(100);
             PLC.WriteCoil(8256, false);//Start
-            WTM.listenHat1(true);
-            
-
+            foreach (var silo in Silo.Hat1)
+            {
+                silo.listenPLC();
+            }
         }
         private void Hat2_Start_Click(object sender, RoutedEventArgs e)
         {
@@ -689,7 +704,10 @@ namespace CAY_Weighing
             PLC.WriteCoil(8262, true);//Stop
             Thread.Sleep(100);
             PLC.WriteCoil(8262, false); //Start
-            WTM.listenHat2(true);
+            foreach (var silo in Silo.Hat2)
+            {
+                silo.listenPLC();
+            }
         }
         private void Hat1_Stop_Click(object sender, RoutedEventArgs e)
         {

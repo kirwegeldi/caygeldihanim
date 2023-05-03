@@ -125,21 +125,22 @@ namespace CAY_Weighing
             if (!modbusClient.Connected)
             {
                 Connect();
-                Common.Logger.LogInfo("Connectn altına geldi");
                 return false;
             }
             try
             {
-                modbusClient.WriteSingleCoil(coil, value);
-                Thread.Sleep(500);
-                Common.Logger.LogInfo("PLC Write Coil Başarılı");
-
+                lock(modbusClient)
+                {
+                    modbusClient.WriteSingleCoil(coil, value);
+                    Thread.Sleep(500);
+                    Common.Logger.LogInfo("PLC Write Coil Başarılı");
+                }
                 return true;
             }
             catch
             {
                 Disconnect();
-                Common.Logger.LogInfo("PLC WriteCoil Başarısız");
+                Common.Logger.LogInfo("PLC WriteCoil Başarısız " + coil);
 
                 return false;
             }

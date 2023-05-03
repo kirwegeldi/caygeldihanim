@@ -39,7 +39,6 @@ namespace CAY_Weighing
         private bool _blinkStatic;                      // if current weight is below the lower limit it remanins true
         private bool _blink;                            // if current weight is below the lower limit it changes !_blink
         public bool _completed;                         // plc start verildiğinde filling miktarı sete geldiğinde true verir.
-        
         public Silo(int ıd, string ip,int port)
         {
             _ıd = ıd;
@@ -76,34 +75,58 @@ namespace CAY_Weighing
         public double GetMessage()
         {
             if (!_isActive)
-                return CurrentWeight;
+                return _currentWeight;
             int[] value = modbusComm.GetMessage();
             if (value != null)
             {
-                CurrentWeight = value[1] / 10.0;
-                BrutWeight = value[0] / 10.0;
-                return CurrentWeight;
+                _currentWeight = value[1] / 10.0;
+                _brutWeight = value[0] / 10.0;
+                return _currentWeight;
             }
             AddRemove(DisconnectedSilos, ConnectedSilos);
-            return CurrentWeight;
+            return _currentWeight;
+        }
+        public void UpdateUI()
+        {
+            CurrentWeight = _currentWeight;
+            BrutWeight = _brutWeight;
+        }
+        public async Task listenPLC()
+        {
+            await Task.Run(() => {
+                if (this.Connected && this.IsActive && _valueLow>0)
+                {
+                    this._completed = true;
+                    PLC.WriteCoil(8268 + this._ıd, true);
+                    while (_currentWeight > -1*_valueLow)
+                    {
+                        continue;
+                    }
+                    this._completed = false;
+                    PLC.WriteCoil(8268 + this._ıd, false);
+                }
+                });
         }
         public bool WriteTare()
         {
             if (!_isActive)
                 return false;
-            return modbusComm.WriteMessage(88, 2);
+            var result = modbusComm.WriteMessage(88, 2);
+            return result;
         }
         public bool WriteZero()
         {
             if (!_isActive)
                 return false;
-            return modbusComm.WriteMessage(88, 1);
+            var result = modbusComm.WriteMessage(88, 1);
+            return result;
         }
         public bool WriteValueLow()
         {
             if (!_isActive)
                 return false;
-            return modbusComm.WriteMessage(19, _valueLow);
+            var result = modbusComm.WriteMessage(19, _valueLow);
+            return result;
         }
         public bool WriteValueHigh()
         {
@@ -143,7 +166,7 @@ namespace CAY_Weighing
             set
             {
                 _currentWeight = value;
-                CurrentHeight = (int)value;
+                CurrentHeight = value > 0 ? (int)value:0;
                 if (_ıd == 9 || _ıd == 10)
                     Blink = _currentWeight > upperLimit ? true : false;
                 else

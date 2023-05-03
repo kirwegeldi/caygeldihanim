@@ -677,7 +677,7 @@
                                     </ControlTemplate>
                                 </Button.Template>
                             </Button>
-                            <Button Uid="3" Grid.Row="2" Content="Set" BorderThickness="0" Foreground="#FFFFFDFD" Click="Set1_Click">
+                            <Button Uid="2" Grid.Row="2" Content="Set" BorderThickness="0" Foreground="#FFFFFDFD" Click="Set1_Click">
                                 <Button.BorderBrush>
                                     <LinearGradientBrush StartPoint="0,0" EndPoint="0.5,0" SpreadMethod="Reflect">
                                         <GradientStop Color="Green" Offset="0"/>
