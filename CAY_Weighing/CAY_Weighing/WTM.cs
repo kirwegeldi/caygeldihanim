@@ -22,13 +22,13 @@ namespace CAY_Weighing
                 {
                     var silo = Silo.Hat1[i];
 
-                    if (silo.Connected && silo._isActive && !silo._completed)
+                    if (silo.Connected && silo._isActive && !silo.Completed)
                     {
                         flag = true;
                         int[] value = silo.modbusComm.GetMessage();
                         if (value != null && value[1] / 10.0 > silo._valueLow)
                         {
-                            silo._completed = true;
+                            silo.Completed = true;
                             PLC.WriteCoil(8268 + silo._ıd, true);
                             Thread.Sleep(30);
                         }
@@ -39,7 +39,7 @@ namespace CAY_Weighing
                     plcStartHat1 = false;
                     foreach (var silo in Silo.Hat1)
                     {
-                        silo._completed = true;
+                        silo.Completed = true;
                         PLC.WriteCoil(8268 + silo._ıd, false);
                     }
                 }
@@ -55,12 +55,12 @@ namespace CAY_Weighing
                 {
                     var silo = Silo.Hat2[i];
 
-                    if (silo.Connected && silo._isActive && !silo._completed)
+                    if (silo.Connected && silo._isActive && !silo.Completed)
                     {
                         flag = true;
                         if (silo.modbusComm.GetMessage()[1] / 10.0 < silo._valueLow)
                         {
-                            silo._completed = true;
+                            silo.Completed = true;
                             PLC.WriteCoil(8268 + silo._ıd, true);
                         }
                     }
@@ -70,7 +70,7 @@ namespace CAY_Weighing
                     plcStartHat2 = false;
                     foreach (var silo in Silo.Hat2)
                     {
-                        silo._completed = false;
+                        silo.Completed = false;
                         PLC.WriteCoil(8268 + silo._ıd, false);
                     }
                 }

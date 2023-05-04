@@ -75,11 +75,14 @@ namespace CAY_Weighing
             }
             else                                                            //Eğer sql'de bugune ait data varsa günceller ve ekler.
             {
+                Hat1 = 0;
+                Hat2 = 0;
                 foreach (KeyValuePair<int, double> siloinfo in fillingInfo)
                 {
                     double value;
+                    double tablevalue = int.Parse(table.Rows[0][siloinfo.Key].ToString());
                     fillingInfo.TryGetValue(siloinfo.Key, out value);
-                    value += int.Parse(table.Rows[0][siloinfo.Key].ToString());
+                    value += tablevalue;
                     table.Rows[0][siloinfo.Key] = value.ToString();
                 }
                 for (int i =1; i < table.Columns.Count-3; i++)
@@ -170,7 +173,7 @@ namespace CAY_Weighing
             System.Data.DataTable table = null;
             SqlHelper sqlHelper = new SqlHelper();
 
-            string query = $"SELECT* FROM Result WHERE TARIH >= DATEADD(day," + "-1" + ", GETDATE()) ; ";
+            string query = $"SELECT* FROM Result WHERE TARIH > DATEADD(day," + "-1" + ", GETDATE()) ; ";
             sqlHelper.SelectCmdByQuery(DbManager.GetConnectString(), query, out table);
             return table;
         }
@@ -191,7 +194,7 @@ namespace CAY_Weighing
             System.Data.DataTable table = null;
             SqlHelper sqlHelper = new SqlHelper();
 
-            string query = $"SELECT* FROM Result WHERE TARIH >= DATEADD(day," + "-30" + ", GETDATE()) ; ";
+            string query = $"SELECT* FROM Result WHERE TARIH >= DATEADD(day," + "-90" + ", GETDATE()) ; ";
             sqlHelper.SelectCmdByQuery(DbManager.GetConnectString(), query, out table);
             return table;
         }

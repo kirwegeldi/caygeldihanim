@@ -92,6 +92,7 @@ namespace CAY_Weighing
                 silo.Connect();
                 Common.Logger.LogInfo("Connecting " + silo._ıd);
                 silo.modbusComm.ConnectedChanged += ModbusComm_ConnectedChanged;
+                silo.CompletedChanged += Silo_CompletedChanged;
             }
             AllCanvas.Add(CanvasSilo1);
             AllCanvas.Add(CanvasSilo2);
@@ -115,7 +116,7 @@ namespace CAY_Weighing
             LoadAllData();
 
 
-            Hat1PLCworker.DoWork += Hat1Start;
+            Hat1PLCworker.DoWork += Hat1Start;    //PLC de WTM completed coillerini takip eden backgroun workerlar.
             Hat1PLCworker.WorkerSupportsCancellation = true;
             Hat2PLCworker.DoWork += Hat2Start;
             Hat2PLCworker.WorkerSupportsCancellation = true;
@@ -127,22 +128,22 @@ namespace CAY_Weighing
                 PLC.Connect();
                 return;
             }
-            List<Silo> currentConnectedList = new List<Silo>(Silo.ConnectedSilos);
-            FillingInfo.Clear();
-            for (int i = 0; i < currentConnectedList.Count; i++)
-            {
-                Silo silo = currentConnectedList[i];
-                int id = silo._ıd;
-                if (id == 9 || id == 10)
-                    continue;
-                double total = PLC.GetMessage(silo);
-                if (total != -1)
-                {
-                    FillingInfo.Add(silo._ıd, total);
-                }
-            }
-            if (FillingInfo.Count != 0)                         //Herhangi bir silonun PLC si acılıp kapandıysa varsa database'e gönderir
-                Report.SaveFillingData(FillingInfo);
+            //List<Silo> currentConnectedList = new List<Silo>(Silo.ConnectedSilos);
+            //FillingInfo.Clear();
+            //for (int i = 0; i < currentConnectedList.Count; i++)
+            //{
+            //    Silo silo = currentConnectedList[i];
+            //    int id = silo._ıd;
+            //    if (id == 9 || id == 10)
+            //        continue;
+            //    double total = PLC.GetMessage(silo);
+            //    if (total != -1)
+            //    {
+            //        FillingInfo.Add(silo._ıd, total);
+            //    }
+            //}
+            //if (FillingInfo.Count != 0)                         //Herhangi bir silonun PLC si acılıp kapandıysa varsa database'e gönderir
+            //    Report.SaveFillingData(FillingInfo);
         }
         private void SiloTimeEvent(object sender, ElapsedEventArgs e)
         {
@@ -310,7 +311,7 @@ namespace CAY_Weighing
         private void Zero_Click(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;
-            if (true) // şifre girilmesi istenirse true kısmını Password() olarak değiştir.
+            if (Password()) // şifre girilmesi istenirse true kısmını Password() olarak değiştir.
             {
                 bool done = false;
                 try
@@ -326,7 +327,7 @@ namespace CAY_Weighing
         private void Tare_Click(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;
-            if (true) // şifre girilmesi istenirse true kısmını Password() olarak değiştir.
+            if (Password()) // şifre girilmesi istenirse true kısmını Password() olarak değiştir.
             {
                 bool done = false;
                 try
@@ -422,6 +423,50 @@ namespace CAY_Weighing
                 RefreshScreenLog(log, green);
             });
 
+        }
+
+        private void Silo_CompletedChanged(object sender, CompletedChangedEventArgs e)
+        {
+            double total;
+            bool hatFinishedFlag = true; // start verdikten sonra hattaki tüm silolar set değerini tamamladıysa true değeri verir
+            List<Silo> hat;
+            if (e.NewState)
+            {
+                total = e.silo._firstWeight - e.silo._currentWeight;
+                try
+                {
+                    FillingInfo.Add(e.silo._ıd, total);
+                }
+                catch
+                {
+                    FillingInfo[e.silo._ıd] = total;
+                }
+                
+
+                if (e.silo._ıd < 5)
+                    hat = Silo.Hat1;
+                else 
+                    hat = Silo.Hat2;
+
+                for (int i = 0; i < hat.Count; i++)
+                {
+                    var silo = hat[i];
+                    if(!silo.Completed)
+                        hatFinishedFlag = false;
+                }
+                if(hatFinishedFlag)
+                {
+                    Report.SaveFillingData(FillingInfo);
+                    foreach (var silo in hat)       //raporu yazdıktan sonra fillinginfo listesinde ilgili hattın verilerini sıfırlar.(sıfırlamazsan bir sonraki yazmada ilgili silo aktif değilse bile eski değerini database' e yazar)
+                    {
+                        FillingInfo[silo._ıd] = 0;
+                    }
+                }
+            }
+            else
+            {
+                e.silo._firstWeight = e.silo.CurrentWeight;
+            }
         }
 
         #endregion
@@ -749,10 +794,10 @@ namespace CAY_Weighing
             PLC.WriteCoil(8257, true);
             foreach (var silo in Silo.Hat1)
             {
-                if (!silo._completed)
+                if (!silo.Completed)
                 {
-                    silo._completed = true;
-                    PLC.WriteCoil(8268 + silo._ıd, false);
+                    silo.Completed = true;
+                    PLC.WriteCoil(8268 + silo._ıd, true);
                 }
             }
         }
@@ -765,10 +810,10 @@ namespace CAY_Weighing
             Thread.Sleep(100);
             foreach (var silo in Silo.Hat2)
             {
-                if (!silo._completed)
+                if (!silo.Completed)
                 {
-                    silo._completed = true;
-                    PLC.WriteCoil(8268 + silo._ıd, false);
+                    silo.Completed = true;
+                    PLC.WriteCoil(8268 + silo._ıd, true);
                 }
             }
         }

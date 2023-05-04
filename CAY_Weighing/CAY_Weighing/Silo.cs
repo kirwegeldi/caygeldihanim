@@ -31,14 +31,16 @@ namespace CAY_Weighing
         public int _port { get; set; }
         public Communication modbusComm { get; set; }
 
-        private double _currentWeight;
+        public double _currentWeight;
         private double _brutWeight;
         public int _valueLow;
         public int _valueHigh;
         public bool _isActive = true;
         private bool _blinkStatic;                      // if current weight is below the lower limit it remanins true
         private bool _blink;                            // if current weight is below the lower limit it changes !_blink
-        public bool _completed = true;                         // plc start verildiğinde filling miktarı sete geldiğinde true verir.
+        private bool _completed = true;                 // plc start verildiğinde filling miktarı sete geldiğinde true verir.
+        public double _firstWeight;                    // plc wtm rölesi açıldığındaki ağırlık
+
         public Silo(int ıd, string ip,int port)
         {
             _ıd = ıd;
@@ -96,15 +98,15 @@ namespace CAY_Weighing
             await Task.Run(() => {
                 if (this.Connected && this.IsActive && _valueLow>0)
                 {
-                    this._completed = false;
+                    this.Completed = false;
                     PLC.WriteCoil(8268 + this._ıd, false);
                     while (_currentWeight > -1*_valueLow)
                     {
-                        if (_completed || !Connected || !IsActive)
+                        if (Completed || !Connected || !IsActive)
                             break;
                         Task.Delay(50);
                     }
-                    this._completed = true;
+                    Completed = true;
                     PLC.WriteCoil(8268 + this._ıd, true);
                 }
                 });
@@ -183,7 +185,6 @@ namespace CAY_Weighing
             }
         }
 
-        
         public bool Connected
         {
             get => modbusComm._connected;
@@ -194,13 +195,7 @@ namespace CAY_Weighing
             set
             {
                 _currentWeight = value;
-                CurrentHeight = value > 0 ? (int)value:0;
-                if (_ıd == 9 || _ıd == 10)
-                    Blink = _currentWeight > upperLimit ? true : false;
-                else
-                {
-                    Blink = _currentWeight < lowerLimit ? true : false;
-                }
+                
                 OnPropertyChanged("CurrentWeight");
             }
         }
@@ -209,12 +204,19 @@ namespace CAY_Weighing
             set
             {
                 _brutWeight = value;
+                CurrentHeight = value > 0 ? (int)value : 0;
+                if (_ıd == 9 || _ıd == 10)
+                    Blink = _brutWeight > upperLimit ? true : false;
+                else
+                {
+                    Blink = _brutWeight < lowerLimit ? true : false;
+                }
                 OnPropertyChanged("BrutWeight");
             }
          }
         public int CurrentHeight
         {
-            get => (this._ıd ==9 || this._ıd == 10) ? (int)_currentWeight / 13: (int)_currentWeight / 10;
+            get => (this._ıd ==9 || this._ıd == 10) ? (int)_brutWeight / 13: (int)_brutWeight / 10;
             set
             {
                 OnPropertyChanged("CurrentHeight");
