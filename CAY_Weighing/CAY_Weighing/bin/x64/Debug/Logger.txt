@@ -1,243 +1,117 @@
-3.05.2023 15:16:44 - #Error - Disconnect Error on 127.0.0.1:510
-System.Threading.Tasks.TaskCanceledException: Bir görev iptal edildi.
-   konum: System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   konum: System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   konum: System.Windows.Threading.DispatcherOperation.Wait(TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.InvokeImpl(DispatcherOperation operation, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback, DispatcherPriority priority, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback)
-   konum: CAY_Weighing.MainWindow.ModbusComm_ConnectedChanged(Object sender, ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.OnConnectedChanged(ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.set_Connected(Boolean value)
-   konum: CAY_Weighing.Communication.Disconnect()
-3.05.2023 15:16:44 - #Error - Disconnect Error on 127.0.0.1:511
-System.Threading.Tasks.TaskCanceledException: Bir görev iptal edildi.
-   konum: System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   konum: System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   konum: System.Windows.Threading.DispatcherOperation.Wait(TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.InvokeImpl(DispatcherOperation operation, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback, DispatcherPriority priority, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback)
-   konum: CAY_Weighing.MainWindow.ModbusComm_ConnectedChanged(Object sender, ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.OnConnectedChanged(ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.set_Connected(Boolean value)
-   konum: CAY_Weighing.Communication.Disconnect()
-3.05.2023 15:17:35 - #Info - Connected 127.0.0.1:502
-3.05.2023 15:17:35 - #Info - Connected 127.0.0.1:503
-3.05.2023 15:17:35 - #Info - Connected 127.0.0.1:504
-3.05.2023 15:17:40 - #Info - Connected 127.0.0.1:510
-3.05.2023 15:17:40 - #Info - Connected 127.0.0.1:511
-3.05.2023 15:17:40 - #Info - PLC Connected 10.0.0.72:502
-3.05.2023 15:17:46 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:17:46 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:17:47 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:17:47 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:17:47 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:17:48 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:17:48 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:17:48 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:17:48 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:17:49 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:17:49 - #Info - PLC Disconnected 10.0.0.72:502
-3.05.2023 15:17:49 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:17:50 - #Info - PLC Connected 10.0.0.72:502
-3.05.2023 15:18:26 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:18:26 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:18:27 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:18:28 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:18:28 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:18:28 - #Info - PLC Disconnected 10.0.0.72:502
-3.05.2023 15:18:28 - #Info - PLC WriteCoil Başarısız 8272
-3.05.2023 15:18:28 - #Info - PLC Connected 10.0.0.72:502
-3.05.2023 15:18:28 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:19:59 - #Info - Connected 127.0.0.1:502
-3.05.2023 15:19:59 - #Info - Connected 127.0.0.1:503
-3.05.2023 15:19:59 - #Info - Connected 127.0.0.1:504
-3.05.2023 15:20:04 - #Info - Connected 127.0.0.1:510
-3.05.2023 15:20:04 - #Info - Connected 127.0.0.1:511
-3.05.2023 15:20:04 - #Info - PLC Connected 10.0.0.72:502
-3.05.2023 15:20:15 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:20:16 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:20:16 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:20:17 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:20:17 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:20:18 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:20:18 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:20:19 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:20:19 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:20:20 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:20:20 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:20:25 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:20:26 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:20:27 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:20:27 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:20:28 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:20:28 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:20:29 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:20:29 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:20:30 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:20:30 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:20:31 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:20:46 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:20:46 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:20:47 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:20:47 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:20:48 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:20:48 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:20:49 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:20:49 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:21:06 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:21:19 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:21:19 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:21:20 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:21:20 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:21:21 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:21:21 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:21:22 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:21:22 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:21:35 - #Error - Disconnect Error on 127.0.0.1:502
-System.Threading.Tasks.TaskCanceledException: Bir görev iptal edildi.
-   konum: System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   konum: System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   konum: System.Windows.Threading.DispatcherOperation.Wait(TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.InvokeImpl(DispatcherOperation operation, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback, DispatcherPriority priority, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback)
-   konum: CAY_Weighing.MainWindow.ModbusComm_ConnectedChanged(Object sender, ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.OnConnectedChanged(ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.set_Connected(Boolean value)
-   konum: CAY_Weighing.Communication.Disconnect()
-3.05.2023 15:21:35 - #Error - Disconnect Error on 127.0.0.1:503
-System.Threading.Tasks.TaskCanceledException: Bir görev iptal edildi.
-   konum: System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   konum: System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   konum: System.Windows.Threading.DispatcherOperation.Wait(TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.InvokeImpl(DispatcherOperation operation, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback, DispatcherPriority priority, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback)
-   konum: CAY_Weighing.MainWindow.ModbusComm_ConnectedChanged(Object sender, ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.OnConnectedChanged(ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.set_Connected(Boolean value)
-   konum: CAY_Weighing.Communication.Disconnect()
-3.05.2023 15:21:35 - #Error - Disconnect Error on 127.0.0.1:504
-System.Threading.Tasks.TaskCanceledException: Bir görev iptal edildi.
-   konum: System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   konum: System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   konum: System.Windows.Threading.DispatcherOperation.Wait(TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.InvokeImpl(DispatcherOperation operation, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback, DispatcherPriority priority, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback)
-   konum: CAY_Weighing.MainWindow.ModbusComm_ConnectedChanged(Object sender, ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.OnConnectedChanged(ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.set_Connected(Boolean value)
-   konum: CAY_Weighing.Communication.Disconnect()
-3.05.2023 15:21:35 - #Error - Disconnect Error on 127.0.0.1:510
-System.Threading.Tasks.TaskCanceledException: Bir görev iptal edildi.
-   konum: System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   konum: System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   konum: System.Windows.Threading.DispatcherOperation.Wait(TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.InvokeImpl(DispatcherOperation operation, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback, DispatcherPriority priority, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback)
-   konum: CAY_Weighing.MainWindow.ModbusComm_ConnectedChanged(Object sender, ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.OnConnectedChanged(ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.set_Connected(Boolean value)
-   konum: CAY_Weighing.Communication.Disconnect()
-3.05.2023 15:21:35 - #Error - Disconnect Error on 127.0.0.1:511
-System.Threading.Tasks.TaskCanceledException: Bir görev iptal edildi.
-   konum: System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   konum: System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   konum: System.Windows.Threading.DispatcherOperation.Wait(TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.InvokeImpl(DispatcherOperation operation, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback, DispatcherPriority priority, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback)
-   konum: CAY_Weighing.MainWindow.ModbusComm_ConnectedChanged(Object sender, ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.OnConnectedChanged(ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.set_Connected(Boolean value)
-   konum: CAY_Weighing.Communication.Disconnect()
-3.05.2023 15:23:03 - #Info - Connected 127.0.0.1:502
-3.05.2023 15:23:03 - #Info - Connected 127.0.0.1:503
-3.05.2023 15:23:03 - #Info - Connected 127.0.0.1:504
-3.05.2023 15:23:08 - #Info - Connected 127.0.0.1:510
-3.05.2023 15:23:08 - #Info - Connected 127.0.0.1:511
-3.05.2023 15:23:08 - #Info - PLC Connected 10.0.0.72:502
-3.05.2023 15:23:11 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:23:13 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:23:14 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:23:45 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:23:46 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:23:47 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:23:54 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:23:55 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:23:58 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:24:04 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:24:05 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:24:06 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:24:31 - #Info - Connected 127.0.0.1:502
-3.05.2023 15:24:31 - #Info - Connected 127.0.0.1:503
-3.05.2023 15:24:31 - #Info - Connected 127.0.0.1:504
-3.05.2023 15:24:37 - #Info - Connected 127.0.0.1:510
-3.05.2023 15:24:37 - #Info - Connected 127.0.0.1:511
-3.05.2023 15:24:37 - #Info - PLC Connected 10.0.0.72:502
-3.05.2023 15:24:56 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:24:57 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:24:58 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:24:58 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:24:59 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:24:59 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:25:11 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:25:25 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:25:43 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:25:53 - #Error - System.IO.IOException: Aktarma bağlantısından veriler okunamadı: Kurulan bir bağlantı, ana makinenizdeki yazılım tarafından iptal edildi. ---> System.Net.Sockets.SocketException: Kurulan bir bağlantı, ana makinenizdeki yazılım tarafından iptal edildi
+3.05.2023 23:22:48 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:22:48 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:22:49 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:22:51 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:22:51 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:22:53 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:22:57 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:22:57 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:22:58 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:22:58 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:22:59 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:03 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:04 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:04 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:05 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:05 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:06 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:06 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:08 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:08 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:09 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:09 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:10 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:12 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:12 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:14 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:15 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:16 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:18 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:19 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:19 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:40 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:41 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:41 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:45 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:45 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:46 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:47 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:47 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:48 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:49 - #Info - PLC Disconnected 10.0.0.72:502
+3.05.2023 23:23:49 - #Info - PLC Connected 10.0.0.72:502
+3.05.2023 23:23:50 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:50 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:51 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:51 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:52 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:52 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:54 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:55 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:55 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:56 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:56 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:57 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:57 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:58 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:23:58 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:00 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:01 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:01 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:02 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:02 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:03 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:03 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:04 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:06 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:06 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:07 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:08 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:09 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:09 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:10 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:10 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:11 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:17 - #Error - System.IO.IOException: Aktarma bağlantısından veriler okunamadı: Kurulan bir bağlantı, ana makinenizdeki yazılım tarafından iptal edildi. ---> System.Net.Sockets.SocketException: Kurulan bir bağlantı, ana makinenizdeki yazılım tarafından iptal edildi
    konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
    --- İç özel durum yığını izlemesinin sonu ---
    konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
    konum: EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
-   konum: CAY_Weighing.Communication.GetMessage() C:\Users\Şerif Aksoy\Desktop\cass\Liva Çay\CAY_Weighing\CAY_Weighing\Communication.cs içinde: satır 87
-3.05.2023 15:25:53 - #Info - Disconnected 127.0.0.1:503
-3.05.2023 15:25:57 - #Info - Connected 127.0.0.1:503
-3.05.2023 15:26:01 - #Error - System.IO.IOException: Aktarma bağlantısından veriler okunamadı: Kurulan bir bağlantı, ana makinenizdeki yazılım tarafından iptal edildi. ---> System.Net.Sockets.SocketException: Kurulan bir bağlantı, ana makinenizdeki yazılım tarafından iptal edildi
-   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
-   --- İç özel durum yığını izlemesinin sonu ---
-   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
-   konum: EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
-   konum: CAY_Weighing.Communication.GetMessage() C:\Users\Şerif Aksoy\Desktop\cass\Liva Çay\CAY_Weighing\CAY_Weighing\Communication.cs içinde: satır 87
-3.05.2023 15:26:01 - #Info - Disconnected 127.0.0.1:504
-3.05.2023 15:26:03 - #Info - Connected 127.0.0.1:505
-3.05.2023 15:28:43 - #Info - Connected 127.0.0.1:502
-3.05.2023 15:28:43 - #Info - Connected 127.0.0.1:503
-3.05.2023 15:28:44 - #Info - Connected 127.0.0.1:505
-3.05.2023 15:28:48 - #Info - Connected 127.0.0.1:510
-3.05.2023 15:28:48 - #Info - Connected 127.0.0.1:511
-3.05.2023 15:28:48 - #Info - PLC Connected 10.0.0.72:502
-3.05.2023 15:28:54 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:28:55 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:28:55 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:28:56 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:28:56 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:28:57 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:28:57 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:28:58 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:28:58 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:29:04 - #Info - PLC Disconnected 10.0.0.72:502
-3.05.2023 15:29:05 - #Info - PLC Connected 10.0.0.72:502
-3.05.2023 15:29:12 - #Error - System.IO.IOException: Aktarma bağlantısından veriler okunamadı: Kurulan bir bağlantı, ana makinenizdeki yazılım tarafından iptal edildi. ---> System.Net.Sockets.SocketException: Kurulan bir bağlantı, ana makinenizdeki yazılım tarafından iptal edildi
-   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
-   --- İç özel durum yığını izlemesinin sonu ---
-   konum: System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
-   konum: EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
-   konum: CAY_Weighing.Communication.GetMessage() C:\Users\Şerif Aksoy\Desktop\cass\Liva Çay\CAY_Weighing\CAY_Weighing\Communication.cs içinde: satır 87
-3.05.2023 15:29:12 - #Info - Disconnected 127.0.0.1:505
-3.05.2023 15:29:28 - #Info - Connected 127.0.0.1:504
-3.05.2023 15:29:43 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:29:44 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:29:44 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:29:45 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:29:45 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:29:46 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:29:46 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:29:47 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:30:00 - #Error - Disconnect Error on 127.0.0.1:502
+   konum: CAY_Weighing.Communication.GetMessage() C:\Users\Şerif Aksoy\Desktop\03-05-2023 liva\Liva Çay\CAY_Weighing\CAY_Weighing\Communication.cs içinde: satır 87
+3.05.2023 23:24:17 - #Info - Disconnected 127.0.0.1:504
+3.05.2023 23:24:19 - #Info - Connected 127.0.0.1:503
+3.05.2023 23:24:20 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:21 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:21 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:22 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:28 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:29 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:31 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:31 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:33 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:34 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:35 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:35 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:36 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:36 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:37 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:38 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:38 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:39 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:39 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:40 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:42 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:43 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:43 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:44 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:44 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:45 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:46 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:46 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:47 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:47 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:48 - #Info - PLC Write Coil Başarılı
+3.05.2023 23:24:50 - #Error - Disconnect Error on 127.0.0.1:502
 System.Threading.Tasks.TaskCanceledException: Bir görev iptal edildi.
    konum: System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
    konum: System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
@@ -249,7 +123,7 @@ System.Threading.Tasks.TaskCanceledException: Bir görev iptal edildi.
    konum: CAY_Weighing.Communication.OnConnectedChanged(ConnectedChangedEventArgs e)
    konum: CAY_Weighing.Communication.set_Connected(Boolean value)
    konum: CAY_Weighing.Communication.Disconnect()
-3.05.2023 15:30:00 - #Error - Disconnect Error on 127.0.0.1:503
+3.05.2023 23:24:50 - #Error - Disconnect Error on 127.0.0.1:503
 System.Threading.Tasks.TaskCanceledException: Bir görev iptal edildi.
    konum: System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
    konum: System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
@@ -261,230 +135,137 @@ System.Threading.Tasks.TaskCanceledException: Bir görev iptal edildi.
    konum: CAY_Weighing.Communication.OnConnectedChanged(ConnectedChangedEventArgs e)
    konum: CAY_Weighing.Communication.set_Connected(Boolean value)
    konum: CAY_Weighing.Communication.Disconnect()
-3.05.2023 15:30:00 - #Error - Disconnect Error on 127.0.0.1:510
-System.Threading.Tasks.TaskCanceledException: Bir görev iptal edildi.
-   konum: System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   konum: System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   konum: System.Windows.Threading.DispatcherOperation.Wait(TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.InvokeImpl(DispatcherOperation operation, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback, DispatcherPriority priority, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback)
-   konum: CAY_Weighing.MainWindow.ModbusComm_ConnectedChanged(Object sender, ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.OnConnectedChanged(ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.set_Connected(Boolean value)
-   konum: CAY_Weighing.Communication.Disconnect()
-3.05.2023 15:30:00 - #Error - Disconnect Error on 127.0.0.1:511
-System.Threading.Tasks.TaskCanceledException: Bir görev iptal edildi.
-   konum: System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   konum: System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   konum: System.Windows.Threading.DispatcherOperation.Wait(TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.InvokeImpl(DispatcherOperation operation, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback, DispatcherPriority priority, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback)
-   konum: CAY_Weighing.MainWindow.ModbusComm_ConnectedChanged(Object sender, ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.OnConnectedChanged(ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.set_Connected(Boolean value)
-   konum: CAY_Weighing.Communication.Disconnect()
-3.05.2023 15:30:00 - #Error - Disconnect Error on 127.0.0.1:504
-System.Threading.Tasks.TaskCanceledException: Bir görev iptal edildi.
-   konum: System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   konum: System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   konum: System.Windows.Threading.DispatcherOperation.Wait(TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.InvokeImpl(DispatcherOperation operation, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback, DispatcherPriority priority, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback)
-   konum: CAY_Weighing.MainWindow.ModbusComm_ConnectedChanged(Object sender, ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.OnConnectedChanged(ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.set_Connected(Boolean value)
-   konum: CAY_Weighing.Communication.Disconnect()
-3.05.2023 15:31:42 - #Info - Connected 127.0.0.1:502
-3.05.2023 15:31:42 - #Info - Connected 127.0.0.1:503
-3.05.2023 15:31:42 - #Info - Connected 127.0.0.1:504
-3.05.2023 15:31:47 - #Info - Connected 127.0.0.1:510
-3.05.2023 15:31:47 - #Info - Connected 127.0.0.1:511
-3.05.2023 15:31:47 - #Info - PLC Connected 10.0.0.72:502
-3.05.2023 15:32:02 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:32:02 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:32:03 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:32:15 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:32:15 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:32:16 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:32:16 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:32:42 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:37:34 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:37:35 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:37:36 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:37:36 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:37:37 - #Info - PLC Disconnected 10.0.0.72:502
-3.05.2023 15:37:38 - #Info - PLC Connected 10.0.0.72:502
-3.05.2023 15:37:53 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:37:54 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:37:54 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:37:55 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:37:55 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:37:56 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:38:16 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:38:16 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:38:23 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:38:32 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:38:57 - #Error - Disconnect Error on 127.0.0.1:502
-System.Threading.Tasks.TaskCanceledException: Bir görev iptal edildi.
-   konum: System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   konum: System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   konum: System.Windows.Threading.DispatcherOperation.Wait(TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.InvokeImpl(DispatcherOperation operation, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback, DispatcherPriority priority, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback)
-   konum: CAY_Weighing.MainWindow.ModbusComm_ConnectedChanged(Object sender, ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.OnConnectedChanged(ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.set_Connected(Boolean value)
-   konum: CAY_Weighing.Communication.Disconnect()
-3.05.2023 15:38:57 - #Error - Disconnect Error on 127.0.0.1:503
-System.Threading.Tasks.TaskCanceledException: Bir görev iptal edildi.
-   konum: System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   konum: System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   konum: System.Windows.Threading.DispatcherOperation.Wait(TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.InvokeImpl(DispatcherOperation operation, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback, DispatcherPriority priority, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback)
-   konum: CAY_Weighing.MainWindow.ModbusComm_ConnectedChanged(Object sender, ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.OnConnectedChanged(ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.set_Connected(Boolean value)
-   konum: CAY_Weighing.Communication.Disconnect()
-3.05.2023 15:38:57 - #Error - Disconnect Error on 127.0.0.1:504
-System.Threading.Tasks.TaskCanceledException: Bir görev iptal edildi.
-   konum: System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   konum: System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   konum: System.Windows.Threading.DispatcherOperation.Wait(TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.InvokeImpl(DispatcherOperation operation, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback, DispatcherPriority priority, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback)
-   konum: CAY_Weighing.MainWindow.ModbusComm_ConnectedChanged(Object sender, ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.OnConnectedChanged(ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.set_Connected(Boolean value)
-   konum: CAY_Weighing.Communication.Disconnect()
-3.05.2023 15:38:57 - #Error - Disconnect Error on 127.0.0.1:510
-System.Threading.Tasks.TaskCanceledException: Bir görev iptal edildi.
-   konum: System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   konum: System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   konum: System.Windows.Threading.DispatcherOperation.Wait(TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.InvokeImpl(DispatcherOperation operation, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback, DispatcherPriority priority, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback)
-   konum: CAY_Weighing.MainWindow.ModbusComm_ConnectedChanged(Object sender, ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.OnConnectedChanged(ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.set_Connected(Boolean value)
-   konum: CAY_Weighing.Communication.Disconnect()
-3.05.2023 15:38:58 - #Error - Disconnect Error on 127.0.0.1:511
-System.Threading.Tasks.TaskCanceledException: Bir görev iptal edildi.
-   konum: System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   konum: System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   konum: System.Windows.Threading.DispatcherOperation.Wait(TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.InvokeImpl(DispatcherOperation operation, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback, DispatcherPriority priority, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback)
-   konum: CAY_Weighing.MainWindow.ModbusComm_ConnectedChanged(Object sender, ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.OnConnectedChanged(ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.set_Connected(Boolean value)
-   konum: CAY_Weighing.Communication.Disconnect()
-3.05.2023 15:41:24 - #Info - Connected 127.0.0.1:503
-3.05.2023 15:41:24 - #Info - Connected 127.0.0.1:504
-3.05.2023 15:41:25 - #Info - Connected 127.0.0.1:506
-3.05.2023 15:41:25 - #Info - Connected 127.0.0.1:507
-3.05.2023 15:41:25 - #Info - Connected 127.0.0.1:508
-3.05.2023 15:41:26 - #Info - Connected 127.0.0.1:510
-3.05.2023 15:41:26 - #Info - Connected 127.0.0.1:511
-3.05.2023 15:41:26 - #Info - PLC Connected 10.0.0.72:502
-3.05.2023 15:42:29 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:42:30 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:42:30 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:42:31 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:42:31 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:42:32 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:43:48 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:44:14 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:44:31 - #Info - PLC Write Coil Başarılı
-3.05.2023 15:45:32 - #Error - Disconnect Error on 127.0.0.1:503
-System.Threading.Tasks.TaskCanceledException: Bir görev iptal edildi.
-   konum: System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   konum: System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   konum: System.Windows.Threading.DispatcherOperation.Wait(TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.InvokeImpl(DispatcherOperation operation, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback, DispatcherPriority priority, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback)
-   konum: CAY_Weighing.MainWindow.ModbusComm_ConnectedChanged(Object sender, ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.OnConnectedChanged(ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.set_Connected(Boolean value)
-   konum: CAY_Weighing.Communication.Disconnect()
-3.05.2023 15:45:32 - #Error - Disconnect Error on 127.0.0.1:504
-System.Threading.Tasks.TaskCanceledException: Bir görev iptal edildi.
-   konum: System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   konum: System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   konum: System.Windows.Threading.DispatcherOperation.Wait(TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.InvokeImpl(DispatcherOperation operation, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback, DispatcherPriority priority, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback)
-   konum: CAY_Weighing.MainWindow.ModbusComm_ConnectedChanged(Object sender, ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.OnConnectedChanged(ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.set_Connected(Boolean value)
-   konum: CAY_Weighing.Communication.Disconnect()
-3.05.2023 15:45:32 - #Error - Disconnect Error on 127.0.0.1:506
-System.Threading.Tasks.TaskCanceledException: Bir görev iptal edildi.
-   konum: System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   konum: System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   konum: System.Windows.Threading.DispatcherOperation.Wait(TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.InvokeImpl(DispatcherOperation operation, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback, DispatcherPriority priority, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback)
-   konum: CAY_Weighing.MainWindow.ModbusComm_ConnectedChanged(Object sender, ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.OnConnectedChanged(ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.set_Connected(Boolean value)
-   konum: CAY_Weighing.Communication.Disconnect()
-3.05.2023 15:45:32 - #Error - Disconnect Error on 127.0.0.1:507
-System.Threading.Tasks.TaskCanceledException: Bir görev iptal edildi.
-   konum: System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   konum: System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   konum: System.Windows.Threading.DispatcherOperation.Wait(TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.InvokeImpl(DispatcherOperation operation, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback, DispatcherPriority priority, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback)
-   konum: CAY_Weighing.MainWindow.ModbusComm_ConnectedChanged(Object sender, ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.OnConnectedChanged(ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.set_Connected(Boolean value)
-   konum: CAY_Weighing.Communication.Disconnect()
-3.05.2023 15:45:32 - #Error - Disconnect Error on 127.0.0.1:508
-System.Threading.Tasks.TaskCanceledException: Bir görev iptal edildi.
-   konum: System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   konum: System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   konum: System.Windows.Threading.DispatcherOperation.Wait(TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.InvokeImpl(DispatcherOperation operation, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback, DispatcherPriority priority, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback)
-   konum: CAY_Weighing.MainWindow.ModbusComm_ConnectedChanged(Object sender, ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.OnConnectedChanged(ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.set_Connected(Boolean value)
-   konum: CAY_Weighing.Communication.Disconnect()
-3.05.2023 15:45:32 - #Error - Disconnect Error on 127.0.0.1:510
-System.Threading.Tasks.TaskCanceledException: Bir görev iptal edildi.
-   konum: System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   konum: System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   konum: System.Windows.Threading.DispatcherOperation.Wait(TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.InvokeImpl(DispatcherOperation operation, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback, DispatcherPriority priority, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback)
-   konum: CAY_Weighing.MainWindow.ModbusComm_ConnectedChanged(Object sender, ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.OnConnectedChanged(ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.set_Connected(Boolean value)
-   konum: CAY_Weighing.Communication.Disconnect()
-3.05.2023 15:45:32 - #Error - Disconnect Error on 127.0.0.1:511
-System.Threading.Tasks.TaskCanceledException: Bir görev iptal edildi.
-   konum: System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   konum: System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   konum: System.Windows.Threading.DispatcherOperation.Wait(TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.InvokeImpl(DispatcherOperation operation, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback, DispatcherPriority priority, CancellationToken cancellationToken, TimeSpan timeout)
-   konum: System.Windows.Threading.Dispatcher.Invoke(Action callback)
-   konum: CAY_Weighing.MainWindow.ModbusComm_ConnectedChanged(Object sender, ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.OnConnectedChanged(ConnectedChangedEventArgs e)
-   konum: CAY_Weighing.Communication.set_Connected(Boolean value)
-   konum: CAY_Weighing.Communication.Disconnect()
+4.05.2023 11:55:22 - #Info - Connecting 1
+4.05.2023 11:55:23 - #Info - Connecting 2
+4.05.2023 11:55:24 - #Info - Connecting 3
+4.05.2023 11:55:25 - #Info - Connecting 4
+4.05.2023 11:55:26 - #Info - Connecting 5
+4.05.2023 11:55:44 - #Info - Connected 127.0.0.1:502
+4.05.2023 11:55:44 - #Info - Connecting 1
+4.05.2023 11:55:45 - #Info - Connecting 2
+4.05.2023 11:55:46 - #Info - Connecting 3
+4.05.2023 11:55:47 - #Info - Connecting 4
+4.05.2023 11:55:48 - #Info - Connecting 5
+4.05.2023 11:55:49 - #Info - Connecting 6
+4.05.2023 11:55:50 - #Info - Connecting 7
+4.05.2023 11:55:51 - #Info - Connecting 8
+4.05.2023 11:55:52 - #Info - Connecting 9
+4.05.2023 11:55:54 - #Info - Connecting 10
+4.05.2023 11:55:54 - #Info - PLC Connected 10.0.0.72:502
+4.05.2023 11:58:01 - #Info - PLC Write Coil Başarılı
+4.05.2023 11:58:01 - #Info - PLC Write Coil Başarılı
+4.05.2023 11:58:02 - #Info - PLC Write Coil Başarılı
+4.05.2023 11:58:02 - #Info - PLC Write Coil Başarılı
+4.05.2023 11:58:06 - #Info - PLC Write Coil Başarılı
+4.05.2023 11:58:06 - #Info - PLC Write Coil Başarılı
+4.05.2023 11:58:07 - #Info - PLC Write Coil Başarılı
+4.05.2023 11:58:07 - #Info - PLC Write Coil Başarılı
+4.05.2023 11:58:18 - #Info - PLC Write Coil Başarılı
+4.05.2023 11:58:18 - #Info - PLC Write Coil Başarılı
+4.05.2023 11:58:19 - #Info - PLC Write Coil Başarılı
+4.05.2023 11:58:19 - #Info - PLC Write Coil Başarılı
+4.05.2023 11:58:20 - #Info - PLC Write Coil Başarılı
+4.05.2023 11:58:20 - #Info - PLC Write Coil Başarılı
+4.05.2023 11:58:21 - #Info - PLC Write Coil Başarılı
+4.05.2023 11:58:29 - #Info - PLC Write Coil Başarılı
+4.05.2023 11:58:30 - #Info - PLC Write Coil Başarılı
+4.05.2023 11:58:30 - #Info - PLC Write Coil Başarılı
+4.05.2023 11:58:31 - #Info - PLC Write Coil Başarılı
+4.05.2023 11:58:34 - #Info - PLC Write Coil Başarılı
+4.05.2023 11:58:35 - #Info - PLC Write Coil Başarılı
+4.05.2023 11:58:37 - #Info - PLC Write Coil Başarılı
+4.05.2023 11:58:38 - #Info - PLC Write Coil Başarılı
+4.05.2023 11:58:38 - #Info - PLC Write Coil Başarılı
+4.05.2023 11:58:39 - #Info - PLC Write Coil Başarılı
+4.05.2023 11:58:39 - #Info - PLC Write Coil Başarılı
+4.05.2023 11:58:41 - #Info - PLC Write Coil Başarılı
+4.05.2023 11:58:41 - #Info - PLC Write Coil Başarılı
+4.05.2023 11:58:42 - #Info - PLC Write Coil Başarılı
+4.05.2023 11:58:42 - #Info - PLC Write Coil Başarılı
+4.05.2023 11:59:05 - #Info - Connected 127.0.0.1:502
+4.05.2023 11:59:05 - #Info - Connecting 1
+4.05.2023 11:59:06 - #Info - Connecting 2
+4.05.2023 11:59:07 - #Info - Connecting 3
+4.05.2023 11:59:08 - #Info - Connecting 4
+4.05.2023 11:59:09 - #Info - Connecting 5
+4.05.2023 11:59:10 - #Info - Connecting 6
+4.05.2023 11:59:11 - #Info - Connecting 7
+4.05.2023 11:59:12 - #Info - Connecting 8
+4.05.2023 11:59:13 - #Info - Connecting 9
+4.05.2023 11:59:14 - #Info - Connecting 10
+4.05.2023 11:59:14 - #Info - PLC Connected 10.0.0.72:502
+4.05.2023 12:00:17 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:00:18 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:00:18 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:00:19 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:00:25 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:00:31 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:00:32 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:00:32 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:00:33 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:00:34 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:00:35 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:00:40 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:00:43 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:00:44 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:00:44 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:00:45 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:00:45 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:00:46 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:00:46 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:00:47 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:00:52 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:00:53 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:00:53 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:00:54 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:00:54 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:00:55 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:00:55 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:00:56 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:03:07 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:03:07 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:03:08 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:03:08 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:03:09 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:03:09 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:03:10 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:03:10 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:03:30 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:03:30 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:03:31 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:03:31 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:03:32 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:03:33 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:03:33 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:03:34 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:03:35 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:03:36 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:03:36 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:03:37 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:03:45 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:03:46 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:03:46 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:03:47 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:03:57 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:03:58 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:03:58 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:03:59 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:03:59 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:04:00 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:04:02 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:04:03 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:04:07 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:04:07 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:04:08 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:04:08 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:04:10 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:04:10 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:04:12 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:04:13 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:04:14 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:04:14 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:04:15 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:04:15 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:04:16 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:04:16 - #Info - PLC Write Coil Başarılı
+4.05.2023 12:04:17 - #Info - PLC Write Coil Başarılı

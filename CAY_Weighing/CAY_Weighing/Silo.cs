@@ -38,7 +38,7 @@ namespace CAY_Weighing
         public bool _isActive = true;
         private bool _blinkStatic;                      // if current weight is below the lower limit it remanins true
         private bool _blink;                            // if current weight is below the lower limit it changes !_blink
-        public bool _completed;                         // plc start verildiğinde filling miktarı sete geldiğinde true verir.
+        public bool _completed = true;                         // plc start verildiğinde filling miktarı sete geldiğinde true verir.
         public Silo(int ıd, string ip,int port)
         {
             _ıd = ıd;
@@ -79,8 +79,8 @@ namespace CAY_Weighing
             int[] value = modbusComm.GetMessage();
             if (value != null)
             {
-                _currentWeight = value[1] / 10.0;
-                _brutWeight = value[0] / 10.0;
+                _currentWeight = value[3] / 10.0;
+                _brutWeight = value[1] / 10.0;
                 return _currentWeight;
             }
             AddRemove(DisconnectedSilos, ConnectedSilos);
@@ -91,19 +91,21 @@ namespace CAY_Weighing
             CurrentWeight = _currentWeight;
             BrutWeight = _brutWeight;
         }
-        public async Task listenPLC()
+        public async void listenPLC()
         {
             await Task.Run(() => {
                 if (this.Connected && this.IsActive && _valueLow>0)
                 {
-                    this._completed = true;
-                    PLC.WriteCoil(8268 + this._ıd, true);
-                    while (_currentWeight > -1*_valueLow)
-                    {
-                        continue;
-                    }
                     this._completed = false;
                     PLC.WriteCoil(8268 + this._ıd, false);
+                    while (_currentWeight > -1*_valueLow)
+                    {
+                        if (_completed || !Connected || !IsActive)
+                            break;
+                        Task.Delay(50);
+                    }
+                    this._completed = true;
+                    PLC.WriteCoil(8268 + this._ıd, true);
                 }
                 });
         }
@@ -111,22 +113,50 @@ namespace CAY_Weighing
         {
             if (!_isActive)
                 return false;
-            var result = modbusComm.WriteMessage(88, 2);
-            return result;
+            try
+            {
+                var result = modbusComm.WriteMessage(88, 2);
+                return result;
+            }
+            catch
+            {
+                Disconnect();
+                return false;
+            }
         }
         public bool WriteZero()
         {
             if (!_isActive)
                 return false;
-            var result = modbusComm.WriteMessage(88, 1);
-            return result;
+            try
+            {
+                var result = modbusComm.WriteMessage(88, 1);
+                return result;
+            }
+            catch 
+            {
+
+               Disconnect();
+                return false;
+            }
+            
         }
         public bool WriteValueLow()
         {
             if (!_isActive)
                 return false;
-            var result = modbusComm.WriteMessage(19, _valueLow);
-            return result;
+            try
+            {
+                var result = modbusComm.WriteMessage(19, _valueLow);
+                return result;
+            }
+            catch
+            {
+                Disconnect();
+                return false;
+            }
+            
+            
         }
         public bool WriteValueHigh()
         {
@@ -141,8 +171,6 @@ namespace CAY_Weighing
             if(removeList.Contains(this))
                 removeList.Remove(this);
         }
-
-
 
         #region Binding Properties
 
@@ -235,10 +263,41 @@ namespace CAY_Weighing
                     return new SolidColorBrush((Color)ColorConverter.ConvertFromString("#3d3d3d"));
             }
         }
-        
+
 
 
         #endregion
+
+
+        #region PLCCompleted
+        public bool Completed
+        {
+            get => _completed;
+            set
+            {
+                _completed = value;
+                OnCompletedChanged(new CompletedChangedEventArgs(this, _completed));
+            }
+        }
+        public event EventHandler<CompletedChangedEventArgs> CompletedChanged;
+
+        public virtual void OnCompletedChanged(CompletedChangedEventArgs e)
+        {
+            if (CompletedChanged != null)
+                CompletedChanged(this, e);
+        }
+
+        #endregion
+    }
+    public class CompletedChangedEventArgs : EventArgs
+    {
+        public readonly Silo silo;
+        public readonly bool NewState;
+        public CompletedChangedEventArgs(Silo silo, bool NewState)
+        {
+            this.silo = silo;
+            this.NewState = NewState;
+        }
     }
 
 

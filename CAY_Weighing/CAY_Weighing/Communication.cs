@@ -84,7 +84,7 @@ namespace CAY_Weighing
             {
                 while (_clientBusy) ;
                 _clientBusy = true;
-                var result = modbusClient.ReadHoldingRegisters(7, 2);
+                var result = modbusClient.ReadHoldingRegisters(7, 4);
                 _clientBusy = false;
                 return result;
             }
@@ -118,7 +118,6 @@ namespace CAY_Weighing
                 return false;
             }
         }
-
         public bool Connected
         {
             get => _connected;

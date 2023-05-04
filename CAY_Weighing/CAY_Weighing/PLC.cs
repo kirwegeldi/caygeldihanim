@@ -14,7 +14,7 @@ namespace CAY_Weighing
         public static string _Ip = "10.0.0.72";
         public static int _port = 502;
 
-        public static ModbusClient modbusClient = new ModbusClient("127.0.0.1", 512);
+        public static ModbusClient modbusClient = new ModbusClient("10.0.0.72", 502);
         public static bool _connected { get; set; }
 
         public static bool[] _fillingstatus  = new bool[10];
@@ -45,7 +45,6 @@ namespace CAY_Weighing
             }
             return true;
         }
-
         public static bool Disconnect()
         {
             if (!_connected)
@@ -69,7 +68,6 @@ namespace CAY_Weighing
             }
             return true;
         }
-
         public static double GetMessage(Silo silo)
         {
             try
@@ -139,9 +137,8 @@ namespace CAY_Weighing
             }
             catch
             {
-                Disconnect();
                 Common.Logger.LogInfo("PLC WriteCoil Başarısız " + coil);
-
+                Disconnect();
                 return false;
             }
         }
