@@ -18,3 +18,13 @@
 3.05.2023 21:46:15 - #Info - Disconnected 127.0.0.1:502
 3.05.2023 21:46:15 - #Info - PLC Connected 10.0.0.72:502
 3.05.2023 21:46:20 - #Info - Connected 127.0.0.1:502
+6.05.2023 13:16:47 - #Info - Connecting 1
+6.05.2023 13:16:48 - #Info - Connecting 2
+6.05.2023 13:16:49 - #Info - Connecting 3
+6.05.2023 13:16:50 - #Info - Connecting 4
+6.05.2023 13:16:51 - #Info - Connecting 5
+6.05.2023 13:16:52 - #Info - Connecting 6
+6.05.2023 13:16:53 - #Info - Connecting 7
+6.05.2023 13:16:54 - #Info - Connecting 8
+6.05.2023 13:16:55 - #Info - Connecting 9
+6.05.2023 13:16:56 - #Info - Connecting 10

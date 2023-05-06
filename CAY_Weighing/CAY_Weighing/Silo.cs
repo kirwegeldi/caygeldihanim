@@ -149,7 +149,7 @@ namespace CAY_Weighing
                 return false;
             try
             {
-                var result = modbusComm.WriteMessage(19, _valueLow);
+                var result = modbusComm.WriteMessage(19, _valueLow*10);
                 return result;
             }
             catch
@@ -277,8 +277,9 @@ namespace CAY_Weighing
             get => _completed;
             set
             {
+                bool _prevstatus = _completed;
                 _completed = value;
-                OnCompletedChanged(new CompletedChangedEventArgs(this, _completed));
+                OnCompletedChanged(new CompletedChangedEventArgs(this, _completed,_prevstatus));
             }
         }
         public event EventHandler<CompletedChangedEventArgs> CompletedChanged;
@@ -295,10 +296,12 @@ namespace CAY_Weighing
     {
         public readonly Silo silo;
         public readonly bool NewState;
-        public CompletedChangedEventArgs(Silo silo, bool NewState)
+        public readonly bool PrevState;
+        public CompletedChangedEventArgs(Silo silo, bool NewState, bool PrevState)
         {
             this.silo = silo;
             this.NewState = NewState;
+            this.PrevState = PrevState;
         }
     }
 

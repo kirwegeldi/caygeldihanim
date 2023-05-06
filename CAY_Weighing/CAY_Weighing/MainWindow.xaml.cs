@@ -61,7 +61,7 @@ namespace CAY_Weighing
         private void Gıybet_Loaded(object sender, RoutedEventArgs e)
         {
             siloTimer.Elapsed += new ElapsedEventHandler(SiloTimeEvent);
-            siloTimer.Interval = 200;
+            siloTimer.Interval = 400;
             siloTimer.Enabled = true;
 
             plcTimer.Elapsed += new ElapsedEventHandler(PLCTimeEvent);
@@ -86,7 +86,7 @@ namespace CAY_Weighing
 
                 if (silo._ıd < 5)
                     Silo.Hat1.Add(silo);
-                else if (silo._ıd <9)
+                if (silo._ıd > 4 && silo._ıd <9)
                     Silo.Hat2.Add(silo);
 
                 silo.Connect();
@@ -120,6 +120,12 @@ namespace CAY_Weighing
             Hat1PLCworker.WorkerSupportsCancellation = true;
             Hat2PLCworker.DoWork += Hat2Start;
             Hat2PLCworker.WorkerSupportsCancellation = true;
+
+
+            foreach (var silo in Silo.AllSilos)
+            {
+                PLC.WriteCoil(8268 + silo._ıd, true);
+            }
         }
         private void PLCTimeEvent(object sender, ElapsedEventArgs e)
         {
@@ -252,8 +258,6 @@ namespace CAY_Weighing
             int id = int.Parse((sender as CheckBox).Uid) + 1;
             var silo = Silo.AllSilos.Find(s => s._ıd == id);
 
-
-
             if (silo == null)
                 return;
             if ((sender as CheckBox).IsChecked == false)
@@ -306,6 +310,8 @@ namespace CAY_Weighing
                 }
             }
             catch (Exception ex) { Common.Logger.LogError(ex.ToString()); }
+            if (!silo.Connected)
+                silo.Connect();
         }
 
         private void Zero_Click(object sender, RoutedEventArgs e)
@@ -360,6 +366,7 @@ namespace CAY_Weighing
                         {
                             silo._valueLow = Convert.ToInt32(keypad.Result);
                             done = silo.WriteValueLow();
+                            
                             if (done)
                             {
                                 (sender as Button).Content = "Set: " + silo._valueLow;
@@ -383,6 +390,36 @@ namespace CAY_Weighing
             MessageBoxResult message = MessageBox.Show("Program kapatılsın mı?", "Kapat", MessageBoxButton.OKCancel, MessageBoxImage.Question);
             if (message == MessageBoxResult.OK)
             {
+                #region Hat1Stop
+                Hat1PLCworker.CancelAsync();
+                PLC.WriteCoil(8256, false);
+                PLC.WriteCoil(8257, true);
+                foreach (var silo in Silo.Hat1)
+                {
+                    if (!silo.Completed)
+                    {
+                        silo.Completed = true;
+                        PLC.WriteCoil(8268 + silo._ıd, true);
+                    }
+                }
+                #endregion
+                #region Hat2Stop
+                Hat2PLCworker.CancelAsync();
+                PLC.WriteCoil(8262, false);
+                Thread.Sleep(100);
+                PLC.WriteCoil(8268, true);
+                Thread.Sleep(100);
+                foreach (var silo in Silo.Hat2)
+                {
+                    if (!silo.Completed)
+                    {
+                        silo.Completed = true;
+                        PLC.WriteCoil(8268 + silo._ıd, true);
+                    }
+                }
+
+                #endregion
+                Thread.Sleep(1000);
                 Application.Current.Shutdown();
             }
 
@@ -430,7 +467,7 @@ namespace CAY_Weighing
             double total;
             bool hatFinishedFlag = true; // start verdikten sonra hattaki tüm silolar set değerini tamamladıysa true değeri verir
             List<Silo> hat;
-            if (e.NewState)
+            if (e.NewState && !e.PrevState)
             {
                 total = e.silo._firstWeight - e.silo._currentWeight;
                 try
@@ -741,9 +778,7 @@ namespace CAY_Weighing
                 silo.listenPLC();
             }
             PLC.WriteCoil(8257, false);//Stop
-            Thread.Sleep(100);
             PLC.WriteCoil(8256, true);//Start
-            Thread.Sleep(100);
             PLC.WriteCoil(8256, false);//Stop
         }
         private void Hat2Start(object sender, DoWorkEventArgs e)

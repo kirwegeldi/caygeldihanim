@@ -10,7 +10,7 @@
         Title="MainWindow" Height="768" Width="1024" Name="Gıybet"
         WindowStyle="None"
         ResizeMode="NoResize"
-        WindowStartupLocation="CenterScreen" Loaded="Gıybet_Loaded">
+        WindowStartupLocation="CenterScreen" Loaded="Gıybet_Loaded" Cursor="None">
     <Window.DataContext>
         <local:Silo/>
     </Window.DataContext>
@@ -108,7 +108,7 @@
         <Border
             BorderThickness="2"
             HorizontalAlignment="Left"
-            Width="991"
+            Width="1000"
             Height="338" Margin="10,50,0,348">
             <Border.BorderBrush>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
@@ -964,7 +964,7 @@
         <Border
             BorderThickness="2"
             HorizontalAlignment="Left"
-            Width="991"
+            Width="1000"
             Height="338" Margin="10,393,10,5">
             <Border.BorderBrush>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
@@ -1780,7 +1780,7 @@
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
-                <Button Grid.Column="2" Grid.Row="0" Uid="0" Content="Stop" BorderThickness="0" Foreground="#FFFFFDFD" FontSize="25" VerticalAlignment="Top" HorizontalAlignment="Left" Click="Hat2_Start_Click" Grid.ColumnSpan="2" Margin="197,0,0,0">
+                <Button Grid.Column="2" Grid.Row="0" Uid="0" Content="Stop" BorderThickness="0" Foreground="#FFFFFDFD" FontSize="25" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="197,0,0,0" Click="Hat2_Stop_Click">
                     <Button.BorderBrush>
                         <LinearGradientBrush StartPoint="0,0" EndPoint="0.5,0" SpreadMethod="Reflect">
                             <GradientStop Color="Green" Offset="0"/>
