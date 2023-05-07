@@ -20,7 +20,6 @@ using System.Timers;
 using System.ComponentModel;
 using System.Windows.Media.Animation;
 using System.Security.Cryptography;
-using System.ComponentModel;
 
 namespace CAY_Weighing
 {
@@ -49,6 +48,10 @@ namespace CAY_Weighing
             Common.GetloggerDir();
             InitializeComponent();
             ScreenLogger.DataContext = this;
+            Hat1StartButton.DataContext = this;
+            Hat1StopButton.DataContext = this;
+            Hat2StartButton.DataContext = this;
+            Hat2StopButton.DataContext = this;
 
             Initialize();
         }
@@ -432,6 +435,20 @@ namespace CAY_Weighing
             }
 
         }
+
+        #region Start-Stop Butons Disabled
+        private bool _plcbuttonsenabled = true;
+        public bool PlcButtonsEnabled 
+        {
+            get => _plcbuttonsenabled;
+            set
+            {
+                _plcbuttonsenabled = value;
+                OnPropertyChanged("PlcButtonsEnabled");
+
+            }
+        }
+        #endregion
         #endregion
 
         #region EventHandlers
@@ -659,6 +676,7 @@ namespace CAY_Weighing
             set
             {
                 _screenLog = value;
+                PlcButtonsEnabled = (_screenLog == "İşlem başlatılıyor...") ? false : true;
                 OnPropertyChanged("ScreenLog");
             }
         }
