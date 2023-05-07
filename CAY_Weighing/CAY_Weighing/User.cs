@@ -54,6 +54,7 @@ namespace CAY_Weighing
                     DeleteLastRow();
                     sqlHelper.ExecuteQuery(conn, query);
                     LoadUserInfo();
+                    Common.Logger.LogInfo("Operatör Şifresi Değiştirildi.");
                     return true;
                 }
                 return false;

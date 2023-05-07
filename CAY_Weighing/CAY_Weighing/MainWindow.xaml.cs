@@ -91,7 +91,7 @@ namespace CAY_Weighing
                     Silo.Hat2.Add(silo);
 
                 silo.Connect();
-                Common.Logger.LogInfo("Connecting " + silo._ıd);
+
                 silo.modbusComm.ConnectedChanged += ModbusComm_ConnectedChanged;
                 silo.CompletedChanged += Silo_CompletedChanged;
             }
@@ -155,10 +155,7 @@ namespace CAY_Weighing
                         silo.GetMessage();
                     }
                 }
-                catch
-                {
-                    Console.WriteLine("Error in GetMessage main");
-                }
+                catch { }
             });
         }
         private void ConnectAsync()
@@ -166,7 +163,6 @@ namespace CAY_Weighing
             if (!PLC._connected)
             {
                 PLC.Connect();
-                return;
             }
             Parallel.For(0, Silo.DisconnectedSilos.Count, i =>
             {
@@ -259,38 +255,6 @@ namespace CAY_Weighing
             }
             (sender as CheckBox).IsChecked = result;
 
-            try
-            {
-                silo.IsActive = result;
-                switch (id)
-                {
-                    case 1:
-                        PLC.WriteCoil(8258, result);
-                        break;
-                    case 2:
-                        PLC.WriteCoil(8259, result);
-                        break;
-                    case 3:
-                        PLC.WriteCoil(8260, result);
-                        break;
-                    case 4:
-                        PLC.WriteCoil(8261, result);
-                        break;
-                    case 5:
-                        PLC.WriteCoil(8264, result);
-                        break;
-                    case 6:
-                        PLC.WriteCoil(8265, result);
-                        break;
-                    case 7:
-                        PLC.WriteCoil(8266, result);
-                        break;
-                    case 8:
-                        PLC.WriteCoil(8267, result);
-                        break;
-                }
-            }
-            catch (Exception ex) { Common.Logger.LogError(ex.ToString()); }
             if (!silo.Connected)
                 silo.Connect();
         }

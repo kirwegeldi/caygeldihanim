@@ -28,12 +28,11 @@ namespace CAY_Weighing
             {
                 _dbConnection.ConnectionString = connectionString;
                 _dbConnection.Open();
-
                 opened = true;
             }
             catch (Exception ex)
             {
-                Common.Logger.LogError(ex.ToString());
+                Common.Logger.LogError("SQL Helper Open() Error." + ex.Message);
                 opened = false;
             }
             return opened;

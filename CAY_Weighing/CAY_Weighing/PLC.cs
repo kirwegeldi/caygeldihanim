@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using static EasyModbus.ModbusServer;
 
 namespace CAY_Weighing
 {
@@ -39,10 +40,8 @@ namespace CAY_Weighing
                 Common.Logger.LogInfo("PLC Connected " +
                     _Ip.ToString() + ":" + _port.ToString());
             }
-            catch (Exception ex)
+            catch
             {
-                Console.WriteLine("PLC Connection Error on {0}:{1} :\n{2}",
-                    _Ip, _port, ex.ToString());
                 return false;
             }
             return true;
@@ -55,17 +54,12 @@ namespace CAY_Weighing
             {
                 modbusClient.Disconnect();
                 _connected = false;
-                Console.WriteLine("PLC Disconnected {0}:{1}",
-                    _Ip, _port);
+
                 Common.Logger.LogInfo("PLC Disconnected " +
                    _Ip.ToString() + ":" + _port.ToString());
             }
-            catch (Exception ex)
+            catch 
             {
-                Console.WriteLine("PLC Disconnect Error {0}:{1} :\n{2}",
-                    _Ip, _port, ex.ToString());
-                Common.Logger.LogError("PLC Disconnect Error on " +
-                   _Ip.ToString() + ":" + _port.ToString() + "\n" + ex.ToString());
                 return false;
             }
             return true;
@@ -114,8 +108,10 @@ namespace CAY_Weighing
                 Thread.Sleep(500);
                 return true;
             }
-            catch
+            catch(Exception ex)
             {
+                Common.Logger.LogError("PLC WriteRegister Error " +
+                    "Register: " + register + ":" + "value: " + value + "\n" + ex.Message);
                 Disconnect();
                 return false;
             }
@@ -133,13 +129,13 @@ namespace CAY_Weighing
                 {
                     modbusClient.WriteSingleCoil(coil, value);
                     Thread.Sleep(500);
-                    Common.Logger.LogInfo("PLC Write Coil Başarılı");
                 }
                 return true;
             }
-            catch
+            catch(Exception ex)
             {
-                Common.Logger.LogInfo("PLC WriteCoil Başarısız " + coil);
+                Common.Logger.LogError("PLC WriteCoil Error " +
+                    "coil: " + coil + ":" + "value: " + value + "\n" + ex.Message);
                 Disconnect();
                 return false;
             }

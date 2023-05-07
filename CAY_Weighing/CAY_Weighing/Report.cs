@@ -33,83 +33,90 @@ namespace CAY_Weighing
         {
             filledSilo = new double[9];
             System.Data.DataTable table = LoadDataDaily();
-
-            if (table.Rows.Count == 0)                                  //Eğer bugün hiçbir data kaydedilmediyse şuanki dataları atayıp database'e gönderir.
+            try
             {
-                for (int i = 0; i < filledSilo.Length; i++)
+                if (table.Rows.Count == 0)                                  //Eğer bugün hiçbir data kaydedilmediyse şuanki dataları atayıp database'e gönderir.
                 {
-                    filledSilo[i] = 0;
+                    for (int i = 0; i < filledSilo.Length; i++)
+                    {
+                        filledSilo[i] = 0;
+                    }
+                    foreach (KeyValuePair<int, double> siloinfo in fillingInfo)
+                    {
+                        double value;
+                        fillingInfo.TryGetValue(siloinfo.Key, out value);
+                        filledSilo[siloinfo.Key] = value;
+                    }
+                    Silo1 = filledSilo[1];
+                    Silo2 = filledSilo[2];
+                    Silo3 = filledSilo[3];
+                    Silo4 = filledSilo[4];
+                    Silo5 = filledSilo[5];
+                    Silo6 = filledSilo[6];
+                    Silo7 = filledSilo[7];
+                    Silo8 = filledSilo[8];
+
+                    double total = 0;
+
+                    for (int i = 1; i < 4; i++)
+                    {
+
+                        total += filledSilo[i];
+                    }
+
+                    Hat1 = total;
+                    total = 0;
+
+                    for (int i = 4; i < 8; i++)
+                    {
+                        total += filledSilo[i];
+                    }
+
+                    Hat2 = total;
                 }
-                foreach(KeyValuePair<int, double> siloinfo in fillingInfo)
+                else                                                            //Eğer sql'de bugune ait data varsa günceller ve ekler.
                 {
-                    double value;
-                    fillingInfo.TryGetValue(siloinfo.Key, out value);
-                    filledSilo[siloinfo.Key] = value;
+                    Hat1 = 0;
+                    Hat2 = 0;
+                    foreach (KeyValuePair<int, double> siloinfo in fillingInfo)
+                    {
+                        double value;
+                        double tablevalue = double.Parse(table.Rows[0][siloinfo.Key].ToString());
+                        fillingInfo.TryGetValue(siloinfo.Key, out value);
+                        value += tablevalue;
+                        table.Rows[0][siloinfo.Key] = value.ToString();
+                    }
+                    for (int i = 1; i < table.Columns.Count - 3; i++)
+                    {
+                        filledSilo[i] = double.Parse(table.Rows[0][i].ToString());
+                    }
+                    Silo1 = filledSilo[1];
+                    Silo2 = filledSilo[2];
+                    Silo3 = filledSilo[3];
+                    Silo4 = filledSilo[4];
+                    Silo5 = filledSilo[5];
+                    Silo6 = filledSilo[6];
+                    Silo7 = filledSilo[7];
+                    Silo8 = filledSilo[8];
+
+                    for (int i = 1; i < 5; i++)
+                    {
+                        Hat1 += filledSilo[i];
+                    }
+                    for (int i = 5; i < 9; i++)
+                    {
+                        Hat2 += filledSilo[i];
+                    }
+
+                    DeleteLastRow();
                 }
-                Silo1 = filledSilo[1];
-                Silo2 = filledSilo[2];
-                Silo3 = filledSilo[3];
-                Silo4 = filledSilo[4];
-                Silo5 = filledSilo[5];
-                Silo6 = filledSilo[6];
-                Silo7 = filledSilo[7];
-                Silo8 = filledSilo[8];
-
-                double total = 0;
-
-                for (int i = 1; i < 4; i++)
-                {
-
-                    total += filledSilo[i];
-                }
-
-                Hat1 = total;
-                total = 0;
-
-                for (int i = 4; i < 8; i++)
-                {
-                    total += filledSilo[i];
-                }
-
-                Hat2 = total;
+                InsertRow();
             }
-            else                                                            //Eğer sql'de bugune ait data varsa günceller ve ekler.
+            catch (Exception ex)
             {
-                Hat1 = 0;
-                Hat2 = 0;
-                foreach (KeyValuePair<int, double> siloinfo in fillingInfo)
-                {
-                    double value;
-                    double tablevalue = double.Parse(table.Rows[0][siloinfo.Key].ToString());
-                    fillingInfo.TryGetValue(siloinfo.Key, out value);
-                    value += tablevalue;
-                    table.Rows[0][siloinfo.Key] = value.ToString();
-                }
-                for (int i =1; i < table.Columns.Count-3; i++)
-                {
-                    filledSilo[i] = double.Parse(table.Rows[0][i].ToString());
-                }
-                Silo1 = filledSilo[1];
-                Silo2 = filledSilo[2];
-                Silo3 = filledSilo[3];
-                Silo4 = filledSilo[4];
-                Silo5 = filledSilo[5];
-                Silo6 = filledSilo[6];
-                Silo7 = filledSilo[7];
-                Silo8 = filledSilo[8];
-
-                for (int i = 1; i < 5; i++)
-                {
-                    Hat1 += filledSilo[i];
-                }
-                for (int i = 5; i < 9; i++)
-                {
-                    Hat2 += filledSilo[i];
-                }
-
-                DeleteLastRow();
+                Common.Logger.LogError("Rapor veritabanına yazılamadı." + "\n" + ex.Message);
             }
-            InsertRow();
+            
         }
 
         public static bool ExportasExcel(System.Data.DataTable dataTable , string timeRange)

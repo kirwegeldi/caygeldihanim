@@ -42,15 +42,11 @@ namespace CAY_Weighing
             {
                 modbusClient.Connect();
                 Connected = true;
-                Console.WriteLine("Connected {0}:{1}",
-                    this._Ip, this._port);
-                Common.Logger.LogInfo("Connected " +
-                    this._Ip.ToString() + ":" + this._port.ToString());
+                Common.Logger.LogInfo("Silo " + this._id + " Connected\t"   +
+                    this._Ip + ":" + this._port.ToString());
             }
-            catch (Exception ex)
+            catch
             {
-                Console.WriteLine("Connection Error on {0}:{1} :\n{2}",
-                    this._Ip, this._port, ex.ToString());
                 return false;
             }
             return true;
@@ -63,17 +59,11 @@ namespace CAY_Weighing
             {
                 modbusClient.Disconnect();
                 Connected = false;
-                Console.WriteLine("Disconnected {0}:{1}",
-                    this._Ip, this._port);
-                Common.Logger.LogInfo("Disconnected " +
+                Common.Logger.LogInfo("Silo " + this._id + " Disconnected\t" +
                    this._Ip.ToString() + ":" + this._port.ToString());
             }
-            catch (Exception ex)
+            catch
             {
-                Console.WriteLine("Disconnect Error {0}:{1} :\n{2}",
-                    this._Ip, this._port, ex.ToString());
-                Common.Logger.LogError("Disconnect Error on " +
-                   this._Ip.ToString() + ":" + this._port.ToString() + "\n" + ex.ToString());
                 return false;
             }
             return true;
@@ -90,7 +80,7 @@ namespace CAY_Weighing
             }
             catch (Exception ex)
             {
-                Common.Logger.LogError(ex.ToString());
+                Common.Logger.LogError("Silo " + this._id + " GetMessage Error " + "\n" + ex.Message);
                 Silo.AllSilos.FirstOrDefault(s => s._ıd == this._id).Disconnect(); // sahada değişecek(_port kısmı _ip veya id olacak)
                 return null;
             }
@@ -113,7 +103,7 @@ namespace CAY_Weighing
             }
             catch(Exception ex)
             {
-                Common.Logger.LogError(ex.ToString());
+                Common.Logger.LogError("Silo " + this._id + " WriteMessage Error " + "\n" + ex.Message);
                 _silo.Disconnect();
                 return false;
             }

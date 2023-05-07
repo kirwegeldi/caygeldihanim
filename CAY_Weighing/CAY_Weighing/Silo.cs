@@ -95,21 +95,29 @@ namespace CAY_Weighing
         }
         public async void listenPLC()
         {
-            await Task.Run(() => {
-                if (this.Connected && this.IsActive && _valueLow>0)
-                {
-                    if(PLC.WriteCoil(8268 + this._ıd, false))
-                        this.Completed = false;
-                    while (_currentWeight > -1*_valueLow)
+            try
+            {
+                await Task.Run(() => {
+                    if (this.Connected && this.IsActive && _valueLow > 0)
                     {
-                        if (Completed || !Connected || !IsActive)
-                            break;
-                        Task.Delay(50);
+                        if (PLC.WriteCoil(8268 + this._ıd, false))
+                            this.Completed = false;
+                        while (_currentWeight > -1 * _valueLow)
+                        {
+                            if (Completed || !Connected || !IsActive)
+                                break;
+                            Task.Delay(50);
+                        }
+                        PLC.WriteCoil(8268 + this._ıd, true);
+                        Completed = true;
                     }
-                    PLC.WriteCoil(8268 + this._ıd, true);
-                    Completed = true;
-                }
                 });
+            }
+            catch (Exception ex)
+            {
+                Common.Logger.LogError("Silo " + this._ıd + " listenPLC Error" + "\n" + ex.Message);
+            }
+            
         }
         public bool WriteTare()
         {
@@ -168,10 +176,18 @@ namespace CAY_Weighing
         }
         private void AddRemove(List<Silo> addList, List<Silo> removeList)
         {
-            if (!addList.Contains(this))
-                addList.Add(this);
-            if(removeList.Contains(this))
-                removeList.Remove(this);
+            try
+            {
+                if (!addList.Contains(this))
+                    addList.Add(this);
+                if (removeList.Contains(this))
+                    removeList.Remove(this);
+            }
+            catch (Exception ex)
+            {
+                Common.Logger.LogError("AddRemove List Error" + "\n" + ex.Message);
+            }
+            
         }
 
         #region Binding Properties
