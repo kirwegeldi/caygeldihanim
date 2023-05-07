@@ -22,8 +22,6 @@ namespace CAY_Weighing
         public static double[] _lastWeight { get; set; }
         public static bool[] _nextfiilingStatus { get; set; }
 
-
-
         public static bool Connect()
         {
             if (_connected)
@@ -32,8 +30,12 @@ namespace CAY_Weighing
             {
                 modbusClient.Connect();
                 _connected = true;
-                Console.WriteLine("PLC Connected {0}:{1}",
-                    _Ip, _port);
+
+                foreach (var silo in Silo.AllSilos)
+                {
+                    PLC.WriteCoil(8268 + silo._ıd, true);
+                }
+
                 Common.Logger.LogInfo("PLC Connected " +
                     _Ip.ToString() + ":" + _port.ToString());
             }
