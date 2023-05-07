@@ -10,8 +10,6 @@ namespace CAY_Weighing
 {
     public static class WTM
     {
-
-
         public static void listenHat1(bool plcStartHat1)
         {
             Thread.Sleep(10);

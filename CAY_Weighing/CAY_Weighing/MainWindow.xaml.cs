@@ -30,11 +30,13 @@ namespace CAY_Weighing
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
         private System.Timers.Timer siloTimer = new System.Timers.Timer();
-        private System.Timers.Timer plcTimer = new System.Timers.Timer();
         private System.Timers.Timer UIUpdateTimer = new System.Timers.Timer();
         private System.Timers.Timer connectionTimer = new System.Timers.Timer();
-        private readonly BackgroundWorker Hat1PLCworker = new BackgroundWorker();
-        private readonly BackgroundWorker Hat2PLCworker = new BackgroundWorker();
+
+        private readonly BackgroundWorker Hat1Startworker = new BackgroundWorker();
+        private readonly BackgroundWorker Hat2Startworker = new BackgroundWorker();
+        private readonly BackgroundWorker Hat1Stopworker = new BackgroundWorker();
+        private readonly BackgroundWorker Hat2Stopworker = new BackgroundWorker();
 
         private Dictionary<int, double> FillingInfo = new Dictionary<int, double>();
         private List<Canvas> AllCanvas = new List<Canvas>();
@@ -61,12 +63,8 @@ namespace CAY_Weighing
         private void Gıybet_Loaded(object sender, RoutedEventArgs e)
         {
             siloTimer.Elapsed += new ElapsedEventHandler(SiloTimeEvent);
-            siloTimer.Interval = 400;
+            siloTimer.Interval = 200;
             siloTimer.Enabled = true;
-
-            plcTimer.Elapsed += new ElapsedEventHandler(PLCTimeEvent);
-            plcTimer.Interval = 1000;
-            plcTimer.Enabled = true;
 
             UIUpdateTimer.Elapsed += new ElapsedEventHandler(UIUpdateEvent);
             UIUpdateTimer.Interval = 1000;
@@ -116,10 +114,15 @@ namespace CAY_Weighing
             LoadAllData();
 
 
-            Hat1PLCworker.DoWork += Hat1Start;    //PLC de WTM completed coillerini takip eden backgroun workerlar.
-            Hat1PLCworker.WorkerSupportsCancellation = true;
-            Hat2PLCworker.DoWork += Hat2Start;
-            Hat2PLCworker.WorkerSupportsCancellation = true;
+            Hat1Startworker.DoWork += Hat1Start;    //PLC de WTM completed coillerini takip eden background workerlar.
+            Hat1Startworker.WorkerSupportsCancellation = true;
+            Hat2Startworker.DoWork += Hat2Start;
+            Hat2Startworker.WorkerSupportsCancellation = true;
+
+            Hat1Stopworker.DoWork += Hat1Stop;
+            Hat1Stopworker.WorkerSupportsCancellation = true;
+            Hat2Stopworker.DoWork += Hat2Stop;
+            Hat2Stopworker.WorkerSupportsCancellation = true;
 
 
             foreach (var silo in Silo.AllSilos)
@@ -166,7 +169,13 @@ namespace CAY_Weighing
         private void ConnectionTimeEvent(object sender, ElapsedEventArgs e)
         {
             ConnectAsync();
+            if (!PLC._connected)
+            {
+                PLC.Connect();
+                return;
+            }
         }
+
         private void GetMessage()
         {
             Parallel.For(0, Silo.ConnectedSilos.Count, i =>
@@ -251,7 +260,7 @@ namespace CAY_Weighing
         }
         #endregion
 
-        #region EventHandlers
+        #region ScreenButtons
         private void Enable_Click(object sender, RoutedEventArgs e)
         {
             bool result = false;
@@ -313,7 +322,6 @@ namespace CAY_Weighing
             if (!silo.Connected)
                 silo.Connect();
         }
-
         private void Zero_Click(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;
@@ -391,7 +399,7 @@ namespace CAY_Weighing
             if (message == MessageBoxResult.OK)
             {
                 #region Hat1Stop
-                Hat1PLCworker.CancelAsync();
+                Hat1Startworker.CancelAsync();
                 PLC.WriteCoil(8256, false);
                 PLC.WriteCoil(8257, true);
                 foreach (var silo in Silo.Hat1)
@@ -404,7 +412,7 @@ namespace CAY_Weighing
                 }
                 #endregion
                 #region Hat2Stop
-                Hat2PLCworker.CancelAsync();
+                Hat2Startworker.CancelAsync();
                 PLC.WriteCoil(8262, false);
                 Thread.Sleep(100);
                 PLC.WriteCoil(8268, true);
@@ -424,6 +432,9 @@ namespace CAY_Weighing
             }
 
         }
+        #endregion
+
+        #region EventHandlers
         private void ModbusComm_ConnectedChanged(object sender, ConnectedChangedEventArgs e)
         {
             int id = e.silo._ıd;
@@ -461,7 +472,6 @@ namespace CAY_Weighing
             });
 
         }
-
         private void Silo_CompletedChanged(object sender, CompletedChangedEventArgs e)
         {
             double total;
@@ -478,26 +488,32 @@ namespace CAY_Weighing
                 {
                     FillingInfo[e.silo._ıd] = total;
                 }
-                
+
 
                 if (e.silo._ıd < 5)
                     hat = Silo.Hat1;
-                else 
+                else
                     hat = Silo.Hat2;
 
                 for (int i = 0; i < hat.Count; i++)
                 {
                     var silo = hat[i];
-                    if(!silo.Completed)
+                    if (!silo.Completed)
                         hatFinishedFlag = false;
                 }
-                if(hatFinishedFlag)
+                if (hatFinishedFlag)
                 {
-                    Report.SaveFillingData(FillingInfo);
-                    foreach (var silo in hat)       //raporu yazdıktan sonra fillinginfo listesinde ilgili hattın verilerini sıfırlar.(sıfırlamazsan bir sonraki yazmada ilgili silo aktif değilse bile eski değerini database' e yazar)
+                    try
                     {
-                        FillingInfo[silo._ıd] = 0;
+                        Report.SaveFillingData(FillingInfo);
+                        foreach (var silo in hat)       //raporu yazdıktan sonra fillinginfo listesinde ilgili hattın verilerini sıfırlar.(sıfırlamazsan bir sonraki yazmada ilgili silo aktif değilse bile eski değerini database' e yazar)
+                        {
+                            FillingInfo[silo._ıd] = 0;
+                        }
                     }
+                    catch { }
+
+                    
                 }
             }
             else
@@ -505,7 +521,6 @@ namespace CAY_Weighing
                 e.silo._firstWeight = e.silo.CurrentWeight;
             }
         }
-
         #endregion
 
         #region ReportButtons
@@ -679,6 +694,10 @@ namespace CAY_Weighing
             await Task.Delay(500);
 
             ScreenLog = string.Empty;
+
+            brushcolor.Color = Colors.Green;
+            ScreenLogger.Foreground = brushcolor;
+
             screenLogBusy = false;
             screenLogQueue--;
         }
@@ -711,6 +730,10 @@ namespace CAY_Weighing
             await Task.Delay(500);
 
             ScreenLog = string.Empty;
+
+            logColor.Color = Colors.Green;
+            ScreenLogger.Foreground = logColor;
+
             screenLogBusy = false;
             screenLogQueue--;
         }
@@ -768,41 +791,69 @@ namespace CAY_Weighing
         #region PLC
         private void Hat1Start(object sender, DoWorkEventArgs e)
         {
-            Parallel.ForEach(Silo.Hat1, silo =>
-            {
-                if (silo.Connected && silo.IsActive)
-                    silo.WriteTare();
-            });
+            ScreenLog = "İşlem başlatılıyor...";
             foreach (var silo in Silo.Hat1)
             {
-                silo.listenPLC();
+                if (silo.Connected && silo.IsActive && silo.WriteTare())
+                    silo.listenPLC();
             }
             PLC.WriteCoil(8257, false);//Stop
             PLC.WriteCoil(8256, true);//Start
             PLC.WriteCoil(8256, false);//Stop
+
+            ScreenLog = String.Empty;
         }
         private void Hat2Start(object sender, DoWorkEventArgs e)
         {
+            ScreenLog = "İşlem başlatılıyor...";
             Parallel.ForEach(Silo.Hat2, silo =>
             {
-                if (silo.Connected && silo.IsActive)
-                    silo.WriteTare();
+                if (silo.Connected && silo.IsActive && silo.WriteTare())
+                    silo.listenPLC();
             });
-            foreach (var silo in Silo.Hat2)
-            {
-                silo.listenPLC();
-            }
+            
             PLC.WriteCoil(8268, false);//Stop
             PLC.WriteCoil(8262, true);//Start
             PLC.WriteCoil(8262, false); //Stop
-            
+
+            ScreenLog = String.Empty;
+
         }
+        private void Hat1Stop(object sender, DoWorkEventArgs e)
+        {
+            Hat1Startworker.CancelAsync();
+            PLC.WriteCoil(8256, false);
+            PLC.WriteCoil(8257, true);
+            foreach (var silo in Silo.Hat1)
+            {
+                if (!silo.Completed)
+                {
+                    if(PLC.WriteCoil(8268 + silo._ıd, true))
+                        silo.Completed = true;
+                }
+            }
+        }
+        private void Hat2Stop(object sender, DoWorkEventArgs e)
+        {
+            Hat2Startworker.CancelAsync();
+            PLC.WriteCoil(8262, false);
+            PLC.WriteCoil(8268, true);
+            foreach (var silo in Silo.Hat2)
+            {
+                if (!silo.Completed)
+                {
+                    if(PLC.WriteCoil(8268 + silo._ıd, true))
+                        silo.Completed = true;
+                }
+            }
+        }
+
 
         private void Hat1_Start_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                Hat1PLCworker.RunWorkerAsync();
+                Hat1Startworker.RunWorkerAsync();
             }
             catch 
             {
@@ -814,7 +865,7 @@ namespace CAY_Weighing
         {
             try
             {
-                Hat2PLCworker.RunWorkerAsync();
+                Hat2Startworker.RunWorkerAsync();
             }
             catch
             {
@@ -824,33 +875,11 @@ namespace CAY_Weighing
         }
         private void Hat1_Stop_Click(object sender, RoutedEventArgs e)
         {
-            Hat1PLCworker.CancelAsync();
-            PLC.WriteCoil(8256, false);
-            PLC.WriteCoil(8257, true);
-            foreach (var silo in Silo.Hat1)
-            {
-                if (!silo.Completed)
-                {
-                    silo.Completed = true;
-                    PLC.WriteCoil(8268 + silo._ıd, true);
-                }
-            }
+            Hat1Stopworker.RunWorkerAsync();
         }
         private void Hat2_Stop_Click(object sender, RoutedEventArgs e)
         {
-            Hat2PLCworker.CancelAsync();
-            PLC.WriteCoil(8262, false);
-            Thread.Sleep(100);
-            PLC.WriteCoil(8268, true);
-            Thread.Sleep(100);
-            foreach (var silo in Silo.Hat2)
-            {
-                if (!silo.Completed)
-                {
-                    silo.Completed = true;
-                    PLC.WriteCoil(8268 + silo._ıd, true);
-                }
-            }
+            Hat2Stopworker.RunWorkerAsync();
         }
 
 

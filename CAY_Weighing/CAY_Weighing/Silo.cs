@@ -98,16 +98,16 @@ namespace CAY_Weighing
             await Task.Run(() => {
                 if (this.Connected && this.IsActive && _valueLow>0)
                 {
-                    this.Completed = false;
-                    PLC.WriteCoil(8268 + this._ıd, false);
+                    if(PLC.WriteCoil(8268 + this._ıd, false))
+                        this.Completed = false;
                     while (_currentWeight > -1*_valueLow)
                     {
                         if (Completed || !Connected || !IsActive)
                             break;
                         Task.Delay(50);
                     }
-                    Completed = true;
                     PLC.WriteCoil(8268 + this._ıd, true);
+                    Completed = true;
                 }
                 });
         }
@@ -271,7 +271,7 @@ namespace CAY_Weighing
         #endregion
 
 
-        #region PLCCompleted
+        #region PLCCompleted Eventhandler
         public bool Completed
         {
             get => _completed;

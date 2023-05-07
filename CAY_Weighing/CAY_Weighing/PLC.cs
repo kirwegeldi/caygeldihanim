@@ -14,7 +14,7 @@ namespace CAY_Weighing
         public static string _Ip = "10.0.0.72";
         public static int _port = 502;
 
-        public static ModbusClient modbusClient = new ModbusClient("10.0.0.72", 502);
+        public static ModbusClient modbusClient = new ModbusClient("127.0.0.1", 512);
         public static bool _connected { get; set; }
 
         public static bool[] _fillingstatus  = new bool[10];
@@ -109,7 +109,7 @@ namespace CAY_Weighing
             try
             {
                 modbusClient.WriteSingleRegister(register, value);
-                Thread.Sleep(300);
+                Thread.Sleep(500);
                 return true;
             }
             catch

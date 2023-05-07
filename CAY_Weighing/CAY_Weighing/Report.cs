@@ -80,14 +80,14 @@ namespace CAY_Weighing
                 foreach (KeyValuePair<int, double> siloinfo in fillingInfo)
                 {
                     double value;
-                    double tablevalue = int.Parse(table.Rows[0][siloinfo.Key].ToString());
+                    double tablevalue = double.Parse(table.Rows[0][siloinfo.Key].ToString());
                     fillingInfo.TryGetValue(siloinfo.Key, out value);
                     value += tablevalue;
                     table.Rows[0][siloinfo.Key] = value.ToString();
                 }
                 for (int i =1; i < table.Columns.Count-3; i++)
                 {
-                    filledSilo[i] = int.Parse(table.Rows[0][i].ToString());
+                    filledSilo[i] = double.Parse(table.Rows[0][i].ToString());
                 }
                 Silo1 = filledSilo[1];
                 Silo2 = filledSilo[2];
