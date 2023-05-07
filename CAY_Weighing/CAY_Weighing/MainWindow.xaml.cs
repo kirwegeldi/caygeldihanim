@@ -430,7 +430,6 @@ namespace CAY_Weighing
                 }
 
                 #endregion
-                Thread.Sleep(1000);
                 Application.Current.Shutdown();
             }
 

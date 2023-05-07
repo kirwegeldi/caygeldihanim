@@ -265,9 +265,14 @@ namespace CAY_Weighing
                     return new SolidColorBrush((Color)ColorConverter.ConvertFromString("#3d3d3d"));
             }
         }
-
-
-
+        public Color CompletedStatusColor 
+        {
+            get => _completed ? Colors.Black : Colors.Green;
+            set
+            {
+                OnPropertyChanged("CompletedStatusColor");
+            }
+        }
         #endregion
 
 
@@ -279,6 +284,7 @@ namespace CAY_Weighing
             {
                 bool _prevstatus = _completed;
                 _completed = value;
+                CompletedStatusColor = _completed ? Colors.Black : Colors.Green;
                 OnCompletedChanged(new CompletedChangedEventArgs(this, _completed,_prevstatus));
             }
         }
