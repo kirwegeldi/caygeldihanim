@@ -28,3 +28,13 @@
 6.05.2023 13:16:54 - #Info - Connecting 8
 6.05.2023 13:16:55 - #Info - Connecting 9
 6.05.2023 13:16:56 - #Info - Connecting 10
+8.05.2023 13:51:27 - #Info - Silo 9 Connected	127.0.0.1:510
+8.05.2023 13:51:27 - #Info - Silo 10 Connected	127.0.0.1:511
+8.05.2023 13:51:30 - #Error - Silo 10 GetMessage Error 
+Aktarma bağlantısından veriler okunamadı: Bağlanılan uygun olarak belli bir süre içinde yanıt vermediğinden veya kurulan
+bağlantı bağlanılan ana bilgisayar yanıt vermediğinden bir bağlantı kurulamadı.
+8.05.2023 13:51:30 - #Error - Silo 9 GetMessage Error 
+Aktarma bağlantısından veriler okunamadı: Bağlanılan uygun olarak belli bir süre içinde yanıt vermediğinden veya kurulan
+bağlantı bağlanılan ana bilgisayar yanıt vermediğinden bir bağlantı kurulamadı.
+8.05.2023 13:51:30 - #Info - Silo 10 Disconnected	127.0.0.1:511
+8.05.2023 13:51:30 - #Info - Silo 9 Disconnected	127.0.0.1:510

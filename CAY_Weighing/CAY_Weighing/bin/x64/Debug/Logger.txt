@@ -5,3 +5,47 @@
 7.05.2023 17:45:48 - #Error - Silo 1 GetMessage Error 
 Aktarma bağlantısından veriler okunamadı: Kurulan bir bağlantı, ana makinenizdeki yazılım tarafından iptal edildi.
 7.05.2023 17:45:48 - #Info - Silo 1 Disconnected	127.0.0.1:502
+8.05.2023 12:28:50 - #Info - Silo 1 Connected	127.0.0.1:502
+8.05.2023 12:28:53 - #Info - Silo 5 Connected	127.0.0.1:506
+8.05.2023 12:29:03 - #Info - PLC Connected 10.0.0.72:502
+8.05.2023 12:46:17 - #Info - Silo 1 Connected	127.0.0.1:502
+8.05.2023 12:48:49 - #Info - Silo 1 Connected	127.0.0.1:502
+8.05.2023 13:46:05 - #Info - Silo 9 Connected	127.0.0.1:510
+8.05.2023 13:46:06 - #Info - Silo 10 Connected	127.0.0.1:511
+8.05.2023 13:47:11 - #Error - Silo 9 GetMessage Error 
+Aktarma bağlantısından veriler okunamadı: Kurulan bir bağlantı, ana makinenizdeki yazılım tarafından iptal edildi.
+8.05.2023 13:47:11 - #Info - Silo 9 Disconnected	127.0.0.1:510
+8.05.2023 13:47:13 - #Info - Silo 1 Connected	127.0.0.1:502
+8.05.2023 13:47:52 - #Error - Silo 1 GetMessage Error 
+Aktarma bağlantısından veriler okunamadı: Kurulan bir bağlantı, ana makinenizdeki yazılım tarafından iptal edildi.
+8.05.2023 13:47:52 - #Info - Silo 1 Disconnected	127.0.0.1:502
+8.05.2023 13:47:53 - #Info - Silo 9 Connected	127.0.0.1:510
+8.05.2023 13:48:26 - #Info - Silo 9 Connected	127.0.0.1:510
+8.05.2023 13:48:26 - #Info - Silo 10 Connected	127.0.0.1:511
+8.05.2023 17:49:22 - #Info - Silo 1 Connected	127.0.0.1:502
+8.05.2023 17:49:22 - #Info - Silo 2 Connected	127.0.0.1:503
+8.05.2023 17:49:22 - #Info - Silo 3 Connected	127.0.0.1:504
+8.05.2023 17:49:22 - #Info - Silo 4 Connected	127.0.0.1:505
+8.05.2023 17:49:34 - #Info - PLC Connected 10.0.0.72:502
+8.05.2023 17:50:26 - #Info - Silo 1 Connected	127.0.0.1:502
+8.05.2023 17:50:26 - #Info - Silo 2 Connected	127.0.0.1:503
+8.05.2023 17:50:26 - #Info - Silo 3 Connected	127.0.0.1:504
+8.05.2023 17:50:26 - #Info - Silo 4 Connected	127.0.0.1:505
+8.05.2023 17:50:38 - #Info - PLC Connected 10.0.0.72:502
+8.05.2023 17:52:51 - #Info - Geçmiş silme başarılı.
+8.05.2023 17:58:22 - #Info - Silo 1 Connected	127.0.0.1:502
+8.05.2023 17:58:22 - #Info - Silo 2 Connected	127.0.0.1:503
+8.05.2023 17:58:22 - #Info - Silo 3 Connected	127.0.0.1:504
+8.05.2023 17:58:22 - #Info - Silo 4 Connected	127.0.0.1:505
+8.05.2023 17:58:33 - #Info - PLC Connected 10.0.0.72:502
+8.05.2023 17:59:10 - #Info - Geçmiş silme başarılı.
+8.05.2023 18:03:11 - #Info - Silo 1 Connected	127.0.0.1:502
+8.05.2023 18:03:12 - #Info - Silo 2 Connected	127.0.0.1:503
+8.05.2023 18:03:12 - #Info - Silo 3 Connected	127.0.0.1:504
+8.05.2023 18:03:13 - #Info - Silo 4 Connected	127.0.0.1:505
+8.05.2023 18:03:27 - #Info - PLC Connected 10.0.0.72:502
+8.05.2023 18:09:40 - #Info - Silo 1 Connected	127.0.0.1:502
+8.05.2023 18:09:40 - #Info - Silo 2 Connected	127.0.0.1:503
+8.05.2023 18:09:40 - #Info - Silo 3 Connected	127.0.0.1:504
+8.05.2023 18:09:40 - #Info - Silo 4 Connected	127.0.0.1:505
+8.05.2023 18:09:51 - #Info - PLC Connected 10.0.0.72:502

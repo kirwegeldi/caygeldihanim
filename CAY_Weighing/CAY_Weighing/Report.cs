@@ -58,7 +58,7 @@ namespace CAY_Weighing
 
                     double total = 0;
 
-                    for (int i = 1; i < 4; i++)
+                    for (int i = 1; i < 5; i++)
                     {
 
                         total += filledSilo[i];
@@ -67,7 +67,7 @@ namespace CAY_Weighing
                     Hat1 = total;
                     total = 0;
 
-                    for (int i = 4; i < 8; i++)
+                    for (int i = 5; i < 9; i++)
                     {
                         total += filledSilo[i];
                     }

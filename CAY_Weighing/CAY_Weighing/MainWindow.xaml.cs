@@ -254,7 +254,12 @@ namespace CAY_Weighing
                     result = false;
             }
             (sender as CheckBox).IsChecked = result;
-
+            try
+            {
+                silo.IsActive = result;
+            }
+            catch{ }
+            
             if (!silo.Connected)
                 silo.Connect();
         }

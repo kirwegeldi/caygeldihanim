@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CAY_Weighing"
         mc:Ignorable="d"
-        Title="NumericKeypad" Height="313" Width="299" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Cursor="">
+        Title="NumericKeypad" Height="313" Width="299" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Cursor="None">
     <Window.Resources>
         <DropShadowEffect x:Key="DropShadowEffect" 
 						  ShadowDepth="1" 
