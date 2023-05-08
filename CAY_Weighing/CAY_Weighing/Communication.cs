@@ -18,8 +18,7 @@ namespace CAY_Weighing
         public bool _connected;
         public ModbusClient modbusClient { get; set; }
         public Silo _silo { get; set; }
-        public object obj = new object();
-        private bool _clientBusy = false;
+        public object lockobj = new object();
         public Communication(Silo silo)
         {
             _id = silo._ıd;
@@ -36,54 +35,63 @@ namespace CAY_Weighing
         }
         public bool Connect()
         {
-            if (Connected)
+            lock (lockobj)
+            {
+                if (Connected)
+                    return true;
+                try
+                {
+                    modbusClient.Connect();
+                    Connected = true;
+                    Common.Logger.LogInfo("Silo " + this._id + " Connected\t" +
+                        this._Ip + ":" + this._port.ToString());
+                }
+                catch
+                {
+                    return false;
+                }
                 return true;
-            try
-            {
-                modbusClient.Connect();
-                Connected = true;
-                Common.Logger.LogInfo("Silo " + this._id + " Connected\t"   +
-                    this._Ip + ":" + this._port.ToString());
             }
-            catch
-            {
-                return false;
-            }
-            return true;
+            
         }
         public bool Disconnect()
         {
-            if (!Connected)
+            lock (lockobj) 
+            {
+                if (!Connected)
+                    return true;
+                try
+                {
+                    modbusClient.Disconnect();
+                    Connected = false;
+                    Common.Logger.LogInfo("Silo " + this._id + " Disconnected\t" +
+                       this._Ip.ToString() + ":" + this._port.ToString());
+                }
+                catch
+                {
+                    return false;
+                }
                 return true;
-            try
-            {
-                modbusClient.Disconnect();
-                Connected = false;
-                Common.Logger.LogInfo("Silo " + this._id + " Disconnected\t" +
-                   this._Ip.ToString() + ":" + this._port.ToString());
             }
-            catch
-            {
-                return false;
-            }
-            return true;
+            
         }
         public int[] GetMessage()
         {
-            try
+            lock (lockobj)
             {
-                while (_clientBusy) ;
-                _clientBusy = true;
-                var result = modbusClient.ReadHoldingRegisters(7, 4);
-                _clientBusy = false;
-                return result;
+                try
+                {
+                    var result = modbusClient.ReadHoldingRegisters(7, 4);
+                    return result;
+                }
+                catch (Exception ex)
+                {
+                    Common.Logger.LogError("Silo " + this._id + " GetMessage Error " + "\n" + ex.Message);
+                    Silo.AllSilos.FirstOrDefault(s => s._ıd == this._id).Disconnect(); // sahada değişecek(_port kısmı _ip veya id olacak)
+                    return null;
+                }
             }
-            catch (Exception ex)
-            {
-                Common.Logger.LogError("Silo " + this._id + " GetMessage Error " + "\n" + ex.Message);
-                Silo.AllSilos.FirstOrDefault(s => s._ıd == this._id).Disconnect(); // sahada değişecek(_port kısmı _ip veya id olacak)
-                return null;
-            }
+            
         }
         public bool WriteMessage(int register,int value)
        {
@@ -91,22 +99,23 @@ namespace CAY_Weighing
             {
                 this.Connect();
                 return false;
-            }    
-            try
-            {
-                while (_clientBusy);
-                _clientBusy = true;
-                modbusClient.WriteSingleRegister(register, value);
-                _clientBusy = false;
-                Thread.Sleep(500);
-                return true;
             }
-            catch(Exception ex)
+            lock (lockobj)
             {
-                Common.Logger.LogError("Silo " + this._id + " WriteMessage Error " + "\n" + ex.Message);
-                _silo.Disconnect();
-                return false;
+                try
+                {
+                    modbusClient.WriteSingleRegister(register, value);
+                    Thread.Sleep(500);
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    Common.Logger.LogError("Silo " + this._id + " WriteMessage Error " + "\n" + ex.Message);
+                    _silo.Disconnect();
+                    return false;
+                }
             }
+           
         }
         public bool Connected
         {

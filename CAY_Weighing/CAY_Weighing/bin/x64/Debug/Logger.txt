@@ -49,3 +49,46 @@ Aktarma bağlantısından veriler okunamadı: Kurulan bir bağlantı, ana makine
 8.05.2023 18:09:40 - #Info - Silo 3 Connected	127.0.0.1:504
 8.05.2023 18:09:40 - #Info - Silo 4 Connected	127.0.0.1:505
 8.05.2023 18:09:51 - #Info - PLC Connected 10.0.0.72:502
+8.05.2023 23:04:59 - #Info - Silo 2 Connected	127.0.0.1:503
+8.05.2023 23:05:13 - #Error - Silo 2 GetMessage Error 
+Aktarma bağlantısından veriler okunamadı: Kurulan bir bağlantı, ana makinenizdeki yazılım tarafından iptal edildi.
+8.05.2023 23:05:13 - #Info - Silo 2 Disconnected	127.0.0.1:503
+8.05.2023 23:05:20 - #Info - Silo 1 Connected	127.0.0.1:502
+8.05.2023 23:05:21 - #Error - Silo 1 GetMessage Error 
+Aktarma bağlantısından veriler okunamadı: Kurulan bir bağlantı, ana makinenizdeki yazılım tarafından iptal edildi.
+8.05.2023 23:05:21 - #Info - Silo 1 Disconnected	127.0.0.1:502
+8.05.2023 23:05:25 - #Info - Silo 1 Connected	127.0.0.1:502
+8.05.2023 23:08:08 - #Info - Silo 1 Connected	127.0.0.1:502
+8.05.2023 23:08:08 - #Error - Silo 1 GetMessage Error 
+Aktarma bağlantısından veriler okunamadı: Kurulan bir bağlantı, ana makinenizdeki yazılım tarafından iptal edildi.
+8.05.2023 23:08:08 - #Info - Silo 1 Disconnected	127.0.0.1:502
+8.05.2023 23:08:12 - #Info - Silo 1 Connected	127.0.0.1:502
+8.05.2023 23:08:13 - #Error - Silo 1 GetMessage Error 
+Aktarma bağlantısından veriler okunamadı: Kurulan bir bağlantı, ana makinenizdeki yazılım tarafından iptal edildi.
+8.05.2023 23:08:13 - #Info - Silo 1 Disconnected	127.0.0.1:502
+8.05.2023 23:08:18 - #Info - Silo 1 Connected	127.0.0.1:502
+8.05.2023 23:08:18 - #Error - Silo 1 GetMessage Error 
+Aktarma bağlantısından veriler okunamadı: Kurulan bir bağlantı, ana makinenizdeki yazılım tarafından iptal edildi.
+8.05.2023 23:08:18 - #Info - Silo 1 Disconnected	127.0.0.1:502
+8.05.2023 23:08:23 - #Info - Silo 1 Connected	127.0.0.1:502
+8.05.2023 23:08:23 - #Error - Silo 1 GetMessage Error 
+Aktarma bağlantısından veriler okunamadı: Kurulan bir bağlantı, ana makinenizdeki yazılım tarafından iptal edildi.
+8.05.2023 23:08:23 - #Info - Silo 1 Disconnected	127.0.0.1:502
+8.05.2023 23:08:28 - #Info - Silo 1 Connected	127.0.0.1:502
+8.05.2023 23:08:32 - #Error - Silo 1 GetMessage Error 
+Aktarma bağlantısından veriler okunamadı: Kurulan bir bağlantı, ana makinenizdeki yazılım tarafından iptal edildi.
+8.05.2023 23:08:32 - #Info - Silo 1 Disconnected	127.0.0.1:502
+8.05.2023 23:08:33 - #Info - Silo 1 Connected	127.0.0.1:502
+8.05.2023 23:08:35 - #Error - Silo 1 GetMessage Error 
+Aktarma bağlantısından veriler okunamadı: Kurulan bir bağlantı, ana makinenizdeki yazılım tarafından iptal edildi.
+8.05.2023 23:08:35 - #Info - Silo 1 Disconnected	127.0.0.1:502
+8.05.2023 23:08:38 - #Info - Silo 1 Connected	127.0.0.1:502
+8.05.2023 23:08:43 - #Error - Silo 1 GetMessage Error 
+Aktarma bağlantısından veriler okunamadı: Kurulan bir bağlantı, ana makinenizdeki yazılım tarafından iptal edildi.
+8.05.2023 23:08:43 - #Info - Silo 1 Disconnected	127.0.0.1:502
+8.05.2023 23:08:48 - #Info - Silo 1 Connected	127.0.0.1:502
+8.05.2023 23:08:52 - #Error - Silo 1 GetMessage Error 
+Aktarma bağlantısından veriler okunamadı: Kurulan bir bağlantı, ana makinenizdeki yazılım tarafından iptal edildi.
+8.05.2023 23:08:52 - #Info - Silo 1 Disconnected	127.0.0.1:502
+8.05.2023 23:08:58 - #Info - Silo 1 Connected	127.0.0.1:502
+8.05.2023 23:10:35 - #Info - Silo 1 Connected	127.0.0.1:502
